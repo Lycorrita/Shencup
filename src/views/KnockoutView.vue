@@ -234,7 +234,7 @@ function pickWithLinger(id: string) {
   grid-template-columns: 1fr auto;
   align-items: baseline;
   gap: 6px 12px;
-  padding: 13px 10px 13px 2px;
+  padding: 14px 12px 14px 16px;
   border-bottom: 1px solid var(--line-soft);
   cursor: pointer;
   transition: background 0.18s;

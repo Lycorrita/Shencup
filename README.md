@@ -1,6 +1,4 @@
-# 深杯 · 周深全曲库对决
-
-墨金（Ink & Gold）风格的单页 Web 应用：把周深全曲库做成「世界杯」式对决。
+# Shencup · 周深全曲库对决
 
 ## 流程
 
@@ -44,5 +42,4 @@ npm run ingest    # CSV → catalog.json
 node scripts/selftest.ts   # 引擎自检
 npm run build     # 产物 dist/
 ```
-
-详见 [DEPLOY.md](DEPLOY.md)。非官方粉丝向作品。
+非官方粉丝向作品。

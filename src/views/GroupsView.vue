@@ -80,14 +80,14 @@ function doConfirm() {
       </li>
     </ol>
 
-    <div class="cta-bar">
+    <div class="bottom-fixed">
       <button class="btn btn-gold btn-block" :disabled="!t.canConfirmGroup" @click="t.confirmGroup()">
         {{ t.groupIndex + 1 >= t.groups.length ? '进入淘汰赛' : '确认 · 下一组' }}
       </button>
-    </div>
-    <div class="sec-row">
-      <button class="btn btn-ghost btn-sm" @click="confirm = 'replay'">重玩本轮</button>
-      <button class="btn btn-ghost btn-sm" @click="confirm = 'restart'">重新开始</button>
+      <div class="sec-row">
+        <button class="btn btn-ghost btn-sm" @click="confirm = 'replay'">重玩本轮</button>
+        <button class="btn btn-ghost btn-sm" @click="confirm = 'restart'">重新开始</button>
+      </div>
     </div>
 
     <!-- 二次确认 -->
@@ -132,7 +132,7 @@ function doConfirm() {
   grid-template-columns: 34px 1fr auto;
   align-items: baseline;
   gap: 12px;
-  padding: 13px 12px 13px 2px;
+  padding: 15px 12px 15px 16px;
   border-bottom: 1px solid var(--line-soft);
   cursor: pointer;
   transition: background 0.18s, opacity 0.18s;
@@ -229,18 +229,26 @@ function doConfirm() {
 }
 
 .sec-row {
+  display: flex;
+  gap: 10px;
+}
+.sec-row .btn {
+  flex: 1;
+}
+.bottom-fixed {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: calc(78px + var(--safe-b));
-  z-index: 29;
+  bottom: 0;
+  z-index: 30;
+  padding: 14px 20px calc(16px + var(--safe-b));
   display: flex;
-  gap: 12px;
-  justify-content: center;
-  padding: 0 20px;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(to top, var(--ink) 62%, transparent);
 }
-.sec-row .btn {
-  flex: 0 1 140px;
+.screen.with-cta {
+  padding-bottom: calc(158px + var(--safe-b));
 }
 
 .modal {

@@ -12,7 +12,7 @@ import type { Song, Phase, RunSummary } from '@/types'
 import catalog from '@/data/catalog.json'
 import { shuffle, chunk, randomPairs, elimRange, rescueCards } from '@/engine/tournament'
 
-const STORAGE_KEY = 'shencup:v5'
+const STORAGE_KEY = 'shencup:v6'
 const GROUP_SIZE = 8
 const FINALE_DUELS = 12
 
@@ -284,6 +284,18 @@ export const useTournament = defineStore('tournament', () => {
   function startRound() {
     roundNumber.value++
     if (roundNumber.value === 1) knockStart.value = survivors.value.length
+    // 防御：异常状态（如脏存档恢复）下队伍过小，直接进决赛，避免卡死
+    if (survivors.value.length <= 1) {
+      if (survivors.value.length === 1) {
+        championId.value = survivors.value[0]
+        phase.value = 'champion'
+      }
+      return
+    }
+    if (survivors.value.length <= 8) {
+      enterFinale()
+      return
+    }
     pairs.value = randomPairs(survivors.value) // 进入轮必为偶数
     duelIndex.value = 0
     roundWinners.value = []
