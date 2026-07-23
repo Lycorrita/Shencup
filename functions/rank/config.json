@@ -1,6 +1,6 @@
 {
   "memorySize": 128,
   "timeout": 10,
-  "env": { "CB_ENVID": "" },
+  "env": { "CB_ENVID": "shenhub-d6gzyobpw735191a7" },
   "runtime": "Nodejs16.13"
 }
