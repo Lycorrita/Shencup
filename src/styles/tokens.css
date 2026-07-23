@@ -1,0 +1,67 @@
+/* 深杯 → Shencup · 墨金 Ink & Gold（黑体版）—— 设计令牌 */
+
+:root {
+  /* 墨色阶 */
+  --ink: #0e0e10;
+  --ink-2: #141418;
+  --ink-3: #1a1a20;
+  --ink-4: #202027;
+
+  /* 线 */
+  --line: rgba(201, 169, 106, 0.18);
+  --line-strong: rgba(201, 169, 106, 0.4);
+  --line-soft: rgba(255, 255, 255, 0.06);
+
+  /* 文字 */
+  --paper: #f2f0ea;
+  --dim: rgba(242, 240, 234, 0.6);
+  --dim-2: rgba(242, 240, 234, 0.34);
+  --dim-3: rgba(242, 240, 234, 0.18);
+
+  /* 金箔 */
+  --gold: #c9a96a;
+  --gold-2: #b8965a;
+  --gold-bright: #e2c389;
+  --gold-soft: rgba(201, 169, 106, 0.12);
+
+  /* 字体：统一黑体（无衬线） */
+  --sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'HarmonyOS Sans SC',
+    'Microsoft YaHei', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+  /* 形 */
+  --r-lg: 4px;
+  --r-md: 3px;
+  --r-sm: 2px;
+  --maxw: 560px;
+
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+}
+
+/* 品牌字标：黑体粗体 */
+.brand-mark {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.gold-text {
+  color: var(--gold);
+}
+/* 数字：黑体 + 等宽对齐 */
+.num {
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dim-2);
+}
+.hairline {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+}

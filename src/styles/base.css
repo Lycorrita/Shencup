@@ -1,0 +1,253 @@
+/* 深杯 · 墨金 Ink & Gold —— 全局基础与组件 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  color-scheme: dark;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+input {
+  font: inherit;
+  color: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+::selection {
+  background: var(--gold-soft);
+  color: var(--gold-bright);
+}
+
+:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- 布局 ---------- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.screen {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: calc(var(--safe-t) + 28px) 22px calc(48px + var(--safe-b));
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.screen.with-bar {
+  padding-top: calc(var(--safe-t) + 84px);
+}
+.screen.with-cta {
+  padding-bottom: calc(124px + var(--safe-b));
+}
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 30px;
+  border-radius: var(--r-md);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: transform 0.14s, background 0.2s, border-color 0.2s, opacity 0.2s, color 0.2s;
+  user-select: none;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset;
+}
+.btn-gold:hover {
+  background: var(--gold-bright);
+}
+.btn-gold:disabled {
+  opacity: 0.32;
+  pointer-events: none;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--paper);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.btn-block {
+  width: 100%;
+}
+.btn-sm {
+  min-height: 42px;
+  padding: 0 20px;
+  font-size: 13px;
+}
+
+/* 固定底部操作条 */
+.cta-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  padding: 16px 22px calc(18px + var(--safe-b));
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  background: linear-gradient(to top, var(--ink) 60%, transparent);
+}
+.cta-bar .btn {
+  flex: 1;
+  max-width: var(--maxw);
+}
+
+/* ---------- 卡片 ---------- */
+.card {
+  background: var(--ink-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  transition: border-color 0.2s, background 0.2s, transform 0.14s;
+}
+
+/* ---------- 页头 ---------- */
+.page-head {
+  margin-bottom: 26px;
+}
+.page-head .eyebrow {
+  margin-bottom: 10px;
+  display: block;
+}
+.page-head h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.page-head p {
+  margin-top: 8px;
+  color: var(--dim);
+  font-size: 14px;
+}
+
+/* ---------- 进度细线 ---------- */
+.prog {
+  height: 1px;
+  background: var(--line-soft);
+  position: relative;
+  overflow: hidden;
+}
+.prog > i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--p, 0%);
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(110px + var(--safe-b));
+  transform: translate(-50%, 12px);
+  z-index: 99;
+  max-width: 82vw;
+  padding: 11px 20px;
+  border-radius: var(--r-md);
+  background: var(--ink-3);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--paper);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- 过渡 ---------- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+.duel-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.duel-enter-from {
+  opacity: 0;
+  transform: translateY(14px) scale(0.985);
+}
+
+/* ---------- 响应式 ---------- */
+@media (min-width: 760px) {
+  :root {
+    --maxw: 680px;
+  }
+  .page-head h1 {
+    font-size: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "memorySize": 128,
+  "timeout": 10,
+  "env": { "CB_ENVID": "" },
+  "runtime": "Nodejs16.13"
+}

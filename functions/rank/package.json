@@ -1,0 +1,9 @@
+{
+  "name": "rank",
+  "version": "1.0.0",
+  "description": "深杯 · 全局榜单上报与查询",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "latest"
+  }
+}
