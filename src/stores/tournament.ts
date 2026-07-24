@@ -220,6 +220,7 @@ export const useTournament = defineStore('tournament', () => {
   function enterKnockout() {
     survivors.value = shuffle(survivors.value)
     roundNumber.value = 0 // 缩圈赛后救回阶段
+    phase.value = 'knockout'
     beginRescueStage()
   }
 
