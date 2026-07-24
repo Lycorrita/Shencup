@@ -1,15 +1,24 @@
 // Shencup · 结果图导出（Canvas，墨金版式）
-// 八强排位决赛后：精确 1~8 名 + 本局救回的遗珠。
+// 十强排位决赛后：冠军 + 十强(带捞回) + 第一/第二梯队 + 遗珠Top10 + 二维码。
 
+import QRCode from 'qrcode'
 import type { Song } from '@/types'
 
 export interface ExportInput {
   artist: string
-  ranking: (Song | null)[] // index 0 = 第1名
-  rescued: { song: Song; count: number }[]
+  champion: Song
+  /** 十强 1~10 名（index 0 = 冠军），各带捞回次数 */
+  top10: { song: Song; revives: number }[]
+  /** 皇族：十强中捞回次数最少的前三 */
+  royalty: { song: Song; revives: number }[]
+  tier1: Song[] // 第一梯队
+  tier2: Song[] // 第二梯队
+  rescuedTop10: { song: Song; count: number }[]
   date: string
-  site?: string
+  qrUrl: string
 }
+
+const QR_SIZE = 72
 
 const COLORS = {
   ink: '#0E0E10',
@@ -33,20 +42,20 @@ const F = {
   foot: '10px "PingFang SC", "Microsoft YaHei", sans-serif',
 }
 
-const POS = ['冠军', '亚军', '季军', '第 4 名', '第 5 名', '第 6 名', '第 7 名', '第 8 名']
-
 function metaOf(s: Song): string {
   return [s.album, s.year ? String(s.year) : ''].filter(Boolean).join('  ·  ')
 }
-function credOf(s: Song): string {
-  return [
-    s.lyricist && '词 ' + s.lyricist,
-    s.composer && '曲 ' + s.composer,
-    s.arranger && '编 ' + s.arranger,
-    s.producer && '制 ' + s.producer,
-  ]
-    .filter(Boolean)
-    .join('   ·   ')
+function noteOf(s: Song): string {
+  return (s.note || '').trim()
+}
+
+function loadImg(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    img.onload = () => resolve(img)
+    img.onerror = reject
+    img.src = src
+  })
 }
 
 export async function renderResultImage(input: ExportInput): Promise<string> {
@@ -56,6 +65,15 @@ export async function renderResultImage(input: ExportInput): Promise<string> {
   const cw = W - padX * 2
   const cv = document.createElement('canvas')
   const ctx = cv.getContext('2d')!
+
+  // 预生成二维码
+  let qrImg: HTMLImageElement | null = null
+  try {
+    const qrSrc = await QRCode.toDataURL(input.qrUrl, { margin: 1, width: QR_SIZE * scale, color: { dark: '#F2F0EA', light: '#00000000' } })
+    qrImg = await loadImg(qrSrc)
+  } catch {
+    qrImg = null
+  }
 
   const wrap = (text: string, font: string, maxW: number): string[] => {
     ctx.font = font
@@ -77,7 +95,7 @@ export async function renderResultImage(input: ExportInput): Promise<string> {
     return out
   }
 
-  function layout(draw: boolean): number {
+  function layout(draw: boolean, qr: HTMLImageElement | null): number {
     let y = 0
     const setLS = (v: string) => {
       if ('letterSpacing' in ctx) (ctx as any).letterSpacing = v
@@ -113,8 +131,8 @@ export async function renderResultImage(input: ExportInput): Promise<string> {
       }
       y += 1
     }
-    /** 排位行：名次(金) + 曲名(纸白) 同行 */
-    const rankRow = (posLabel: string, title: string, meta: string) => {
+    /** 行：名次(金) + 曲名(纸白) + 捞回(金小)。alwaysShow=true 时 0 也显示（用于皇族）。 */
+    const rankRow = (posLabel: string, title: string, revives: number, alwaysShow = false) => {
       if (draw) {
         ctx.textBaseline = 'top'
         ctx.font = F.tier
@@ -125,14 +143,28 @@ export async function renderResultImage(input: ExportInput): Promise<string> {
         setLS('0px')
         ctx.font = F.song
         ctx.fillStyle = COLORS.paper
-        ctx.fillText(title, padX + 78, y)
-        if (meta) {
+        const t = ctx.measureText(title).width
+        ctx.fillText(title, padX + 64, y)
+        if (revives > 0 || alwaysShow) {
           ctx.font = F.foot
-          ctx.fillStyle = COLORS.dim2
-          ctx.fillText(meta, padX + 78, y + 16)
+          ctx.fillStyle = COLORS.gold2
+          ctx.textAlign = 'right'
+          ctx.fillText(`捞回 ×${revives}`, padX + cw, y + 2)
+          ctx.textAlign = 'left'
         }
+        void t
       }
-      y += meta ? 34 : 26
+      y += 24
+    }
+    /** 梯队：曲名串行换行 */
+    const tierBlock = (label: string, songs: Song[]) => {
+      text(label, F.tier, COLORS.gold, { lh: 18, ls: 3, mb: 8 })
+      text(
+        songs.map((s) => s.title).join('   ·   ') || '—',
+        F.song,
+        COLORS.paper,
+        { lh: 22, mb: 14 },
+      )
     }
 
     y += 40
@@ -141,51 +173,88 @@ export async function renderResultImage(input: ExportInput): Promise<string> {
     line(COLORS.gold)
     y += 22
 
-    const champ = input.ranking[0]
-    if (champ) {
-      text('CHAMPION', F.eyebrow, COLORS.gold2, { lh: 16, ls: 3, mb: 12 })
-      text(champ.title, F.title, COLORS.paper, { lh: 44, mb: 8 })
-      if (metaOf(champ)) text(metaOf(champ), F.meta, COLORS.dim, { lh: 18, mb: 6 })
-      if (credOf(champ)) text(credOf(champ), F.cred, COLORS.dim2, { lh: 18, mb: 22 })
-    }
+    // 冠军
+    const champ = input.champion
+    text('CHAMPION', F.eyebrow, COLORS.gold2, { lh: 16, ls: 3, mb: 12 })
+    text(champ.title, F.title, COLORS.paper, { lh: 44, mb: 8 })
+    if (metaOf(champ)) text(metaOf(champ), F.meta, COLORS.dim, { lh: 18, mb: 6 })
+    if (noteOf(champ)) text(noteOf(champ), F.cred, COLORS.dim2, { lh: 18, mb: 22 })
 
+    // 十强（1~10，带捞回）
     line(COLORS.soft)
     y += 18
-    text('最 终 排 位', F.tier, COLORS.gold, { lh: 18, ls: 3, mb: 10 })
-    for (let i = 1; i < input.ranking.length; i++) {
-      const s = input.ranking[i]
-      if (!s) continue
-      rankRow(POS[i] || `第 ${i + 1} 名`, s.title, metaOf(s))
+    text('十  强', F.tier, COLORS.gold, { lh: 18, ls: 3, mb: 10 })
+    for (let i = 0; i < input.top10.length; i++) {
+      const it = input.top10[i]
+      if (!it || !it.song) continue
+      const label = i === 0 ? '冠' : i === 1 ? '亚' : i === 2 ? '季' : `${i + 1}`
+      rankRow(label, it.song.title, it.revives)
     }
     y += 6
 
-    if (input.rescued.length) {
+    // 皇族：十强中捞回最少前三（捞回 0 也显示）
+    if (input.royalty.length) {
       line(COLORS.soft)
       y += 16
-      text('本局遗珠之选', F.tier, COLORS.gold, { lh: 18, ls: 3, mb: 8 })
+      text('皇 族 · 十强中捞回最少', F.tier, COLORS.gold, { lh: 18, ls: 3, mb: 10 })
+      const RL = ['一', '二', '三']
+      input.royalty.forEach((r, i) => {
+        if (r && r.song) rankRow(RL[i] || String(i + 1), r.song.title, r.revives, true)
+      })
+      y += 6
+    }
+
+    // 双梯队
+    if (input.tier1.length) {
+      line(COLORS.soft)
+      y += 16
+      tierBlock('第 一 梯 队（倒数第一轮）', input.tier1)
+    }
+    if (input.tier2.length) {
+      tierBlock('第 二 梯 队（倒数第二轮）', input.tier2)
+    }
+
+    // 遗珠 Top10
+    if (input.rescuedTop10.length) {
+      line(COLORS.soft)
+      y += 16
+      text('遗珠捞回 Top 10', F.tier, COLORS.gold, { lh: 18, ls: 3, mb: 8 })
       text(
-        input.rescued.map((r) => `${r.song.title} ×${r.count}`).join('   ·   '),
+        input.rescuedTop10.map((r) => `${r.song.title} ×${r.count}`).join('   ·   '),
         F.song,
         COLORS.paper,
-        { lh: 24, mb: 16 },
+        { lh: 22, mb: 16 },
       )
     }
 
+    // 页脚 + 二维码
     y += 4
     line(COLORS.soft)
     y += 16
-    text(input.site || 'Shencup · 周深全曲库对决 · 非官方粉丝作品', F.foot, COLORS.dim2, { lh: 14 })
-    y += 40
+    const footH = Math.max(34, qr ? QR_SIZE + 4 : 34)
+    if (draw && qr) {
+      ctx.drawImage(qr, W - padX - QR_SIZE, y, QR_SIZE, QR_SIZE)
+    }
+    if (draw) {
+      ctx.font = F.foot
+      ctx.fillStyle = COLORS.dim2
+      ctx.textAlign = 'left'
+      ctx.textBaseline = 'top'
+      ctx.fillText('Shencup · 周深全曲库对决', padX, y + 6)
+      ctx.fillText('非官方粉丝作品', padX, y + 22)
+    }
+    y += footH
+    y += 36
     return y
   }
 
-  const H = layout(false)
+  const H = layout(false, qrImg)
   cv.width = W * scale
   cv.height = H * scale
   ctx.scale(scale, scale)
   ctx.fillStyle = COLORS.ink
   ctx.fillRect(0, 0, W, H)
-  layout(true)
+  layout(true, qrImg)
 
   return cv.toDataURL('image/png')
 }

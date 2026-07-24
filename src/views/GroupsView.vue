@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useTournament } from '@/stores/tournament'
-import { metaLine, creditsLine, hasCredits } from '@/lib/format'
+import { metaLine, noteLine, hasNote } from '@/lib/format'
 
 const t = useTournament()
 const router = useRouter()
@@ -35,7 +35,7 @@ function doConfirm() {
 </script>
 
 <template>
-  <section class="screen with-cta">
+  <section class="screen with-bar with-cta">
     <header class="page-head">
       <span class="eyebrow">Round 01 · 缩圈</span>
       <h1>第一轮 · 缩圈</h1>
@@ -66,7 +66,7 @@ function doConfirm() {
         <div class="info">
           <span class="title">{{ s.title }}</span>
           <span class="meta">{{ metaLine(s) }}</span>
-          <span v-if="hasCredits(s)" class="cred">{{ creditsLine(s) }}</span>
+          <span v-if="hasNote(s)" class="cred">{{ noteLine(s) }}</span>
         </div>
         <div class="right">
           <button

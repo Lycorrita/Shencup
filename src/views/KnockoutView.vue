@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useTournament } from '@/stores/tournament'
-import { metaLine, creditsLine, hasCredits } from '@/lib/format'
+import { metaLine, noteLine, hasNote } from '@/lib/format'
 
 const t = useTournament()
 
@@ -14,7 +14,7 @@ const rescueTitle = computed(() =>
 )
 const parityWord = computed(() => (t.survivors.length % 2 === 0 ? '偶数' : '奇数'))
 
-// 救回列表搜索
+// 救回 / 换入列表搜索
 const rescueQuery = ref('')
 const filteredRescue = computed(() => {
   const q = rescueQuery.value.trim().toLowerCase()
@@ -29,6 +29,18 @@ const filteredRescue = computed(() => {
 })
 watch(() => t.roundNumber, () => {
   rescueQuery.value = ''
+})
+
+// 换出（晋级者）搜索
+const swapOutQuery = ref('')
+const filteredSwapOut = computed(() => {
+  const q = swapOutQuery.value.trim().toLowerCase()
+  const list = t.swapOutCandidates
+  return q ? list.filter((s) => s.title.toLowerCase().includes(q)) : list
+})
+const swapHint = computed(() => {
+  if (t.finalApproach) return '十强收口轮：1 张换位卡，可换可不换'
+  return `本轮 ${t.swapCards} 张换位卡，可换可不换`
 })
 
 // 选中后短暂停留，让用户看清胜负再翻页
@@ -48,7 +60,7 @@ function pickWithLinger(id: string) {
 </script>
 
 <template>
-  <section class="screen">
+  <section class="screen with-bar">
     <header class="kh">
       <span class="eyebrow">Knockout</span>
       <h2 class="brand-mark">{{ t.roundLabel }}</h2>
@@ -64,8 +76,14 @@ function pickWithLinger(id: string) {
       <div class="prog" :style="{ '--p': progWidth }"><i></i></div>
     </div>
 
+    <div v-if="duel && t.canUndoPick" class="undo-bar">
+      <button class="btn btn-ghost btn-xs" :disabled="lock" @click="t.undoPick">
+        ↶ 返回上一步
+      </button>
+    </div>
+
     <Transition name="duel" mode="out-in">
-      <!-- ① 对决 / 八强排位 -->
+      <!-- ① 对决 / 十强排位 -->
       <div v-if="duel && (t.knockSub === 'duel' || t.finaleActive)" :key="duelKey" class="duel">
         <div
           class="dcard"
@@ -81,7 +99,7 @@ function pickWithLinger(id: string) {
           <span class="didx num">01</span>
           <h3 class="dtitle">{{ duel.a.title }}</h3>
           <span class="dmeta">{{ metaLine(duel.a) }}</span>
-          <span v-if="hasCredits(duel.a)" class="dcred">{{ creditsLine(duel.a) }}</span>
+          <span v-if="hasNote(duel.a)" class="dcred">{{ noteLine(duel.a) }}</span>
           <span class="dhint">{{ picking === duel.a.id ? '晋级' : '点击晋级 →' }}</span>
         </div>
         <div class="vs"><span class="brand-mark">VS</span></div>
@@ -99,20 +117,86 @@ function pickWithLinger(id: string) {
           <span class="didx num">02</span>
           <h3 class="dtitle">{{ duel.b.title }}</h3>
           <span class="dmeta">{{ metaLine(duel.b) }}</span>
-          <span v-if="hasCredits(duel.b)" class="dcred">{{ creditsLine(duel.b) }}</span>
+          <span v-if="hasNote(duel.b)" class="dcred">{{ noteLine(duel.b) }}</span>
           <span class="dhint">{{ picking === duel.b.id ? '晋级' : '点击晋级 →' }}</span>
         </div>
       </div>
 
-      <!-- ② 赛后救回（可反复切换；须凑成偶数） -->
+      <!-- ② 换位环节（自由交换：遗珠池换入 1，晋级者换出 1） -->
+      <div v-else-if="t.knockSub === 'swap'" :key="'swap'" class="phase">
+        <p class="phase-tip">
+          换位环节 · <b class="gold-text">{{ swapHint }}</b><br />
+          左侧选 1 首<strong>换出</strong>，右侧选 1 首<strong>换入</strong>，再点底部确认（不改人数，换入记 1 次捞回）。
+        </p>
+        <p class="parity">
+          换位卡 <b class="num">{{ t.swapCards }}</b> · 已换 <b class="num">{{ t.roundSwaps.length }}</b> 次
+        </p>
+
+        <div class="swap-split">
+          <div class="swap-pane">
+            <div class="swap-head">换出 · 晋级者</div>
+            <input class="swap-search" v-model="swapOutQuery" type="search" placeholder="搜索…" />
+            <ul class="swap-list">
+              <li
+                v-for="s in filteredSwapOut"
+                :key="s.id"
+                class="swap-item"
+                :class="{ picked: t.swapOut === s.id }"
+                @click="t.selectSwapOut(s.id)"
+              >
+                <span class="si-title">{{ s.title }}</span>
+                <span class="si-meta">{{ metaLine(s) }}</span>
+              </li>
+              <li v-if="!filteredSwapOut.length" class="swap-empty">无</li>
+            </ul>
+          </div>
+
+          <div class="swap-pane">
+            <div class="swap-head">换入 · 遗珠池</div>
+            <input class="swap-search" v-model="rescueQuery" type="search" placeholder="搜索…" />
+            <ul class="swap-list">
+              <li
+                v-for="s in filteredRescue"
+                :key="s.id"
+                class="swap-item"
+                :class="{ picked: t.swapIn === s.id }"
+                @click="t.selectSwapIn(s.id)"
+              >
+                <span class="si-title">{{ s.title }}</span>
+                <span class="si-meta">{{ metaLine(s) }}</span>
+              </li>
+              <li v-if="!filteredRescue.length" class="swap-empty">无</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="swap-cta">
+          <button class="btn btn-ghost btn-sm" :disabled="!t.roundSwaps.length" @click="t.undoLastSwap">
+            撤回
+          </button>
+          <button class="btn btn-gold" :disabled="!t.canConfirmSwap" @click="t.confirmSwap">
+            确认换位
+          </button>
+          <button class="btn btn-ghost btn-sm" @click="t.endSwap">下一步</button>
+        </div>
+      </div>
+
+      <!-- ③ 赛后救回（可反复切换；十强收口需满 10，否则凑成偶数） -->
       <div v-else-if="t.knockSub === 'rescue'" :key="'rescue'" class="phase">
         <p class="phase-tip">
-          {{ rescueTitle }}，还剩 <b class="gold-text">{{ t.cards }}</b> 张卡（不累计）。点选捞回，<b>再点取消</b>。
+          {{ rescueTitle }}，还剩 <b class="gold-text">{{ t.cards }}</b> 张遗珠卡（不累计）。点选捞回，<b>再点取消</b>。
         </p>
         <p class="parity" :class="{ ok: t.canEndRescue }">
-          当前 <b class="num">{{ t.survivors.length }}</b> 首 · {{ parityWord }}
-          <template v-if="!t.canEndRescue"> — 再捞回或取消 1 首凑成偶数</template>
-          <template v-else> — 可进入下一轮</template>
+          <template v-if="t.finalApproach">
+            十强收口：当前 <b class="num">{{ t.survivors.length }}</b> 首
+            <template v-if="!t.canEndRescue"> — 再捞回 {{ 10 - t.survivors.length }} 首凑满 10</template>
+            <template v-else> — 已满 10，可进入十强角逐</template>
+          </template>
+          <template v-else>
+            当前 <b class="num">{{ t.survivors.length }}</b> 首 · {{ parityWord }}
+            <template v-if="!t.canEndRescue"> — 再捞回或取消 1 首凑成偶数</template>
+            <template v-else> — 可进入下一轮</template>
+          </template>
         </p>
         <div class="rescue-search">
           <input
@@ -145,7 +229,7 @@ function pickWithLinger(id: string) {
         </ul>
         <div class="rescue-cta">
           <button class="btn btn-gold btn-block" :disabled="!t.canEndRescue" @click="t.endRescue()">
-            {{ t.survivors.length <= 8 ? '进入八强排位' : '下一轮' }}
+            {{ t.finalApproach ? '进入十强角逐' : '下一轮' }}
           </button>
         </div>
       </div>
@@ -169,6 +253,15 @@ function pickWithLinger(id: string) {
 
 .prog-wrap {
   margin-bottom: 22px;
+}
+.undo-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin: -14px 0 18px;
+}
+.btn-xs {
+  padding: 5px 12px;
+  font-size: 11px;
 }
 .prog-top {
   display: flex;
@@ -315,6 +408,98 @@ function pickWithLinger(id: string) {
 
 .rescue-cta {
   margin-top: 22px;
+}
+
+/* 换位环节 · 左右双栏 */
+.swap-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.swap-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.swap-head {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--gold-2);
+  margin-bottom: 6px;
+}
+.swap-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 9px;
+  background: var(--ink-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm);
+  color: var(--paper);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.swap-search::placeholder {
+  color: var(--dim-3);
+}
+.swap-list {
+  list-style: none;
+  height: 230px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--ink-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm);
+  padding: 4px;
+}
+.swap-item {
+  padding: 8px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.swap-item:active,
+.swap-item:hover {
+  background: var(--ink-3);
+}
+.swap-item.picked {
+  background: var(--ink-3);
+  box-shadow: inset 2px 0 0 var(--gold);
+}
+.swap-item.picked .si-title {
+  color: var(--gold-bright);
+}
+.si-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.si-meta {
+  display: block;
+  font-size: 10px;
+  color: var(--dim-2);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swap-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--dim-3);
+  font-size: 12px;
+}
+.swap-cta {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.swap-cta .btn-gold {
+  flex: 1;
 }
 
 /* 对决卡 */

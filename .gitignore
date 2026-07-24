@@ -10,3 +10,4 @@ dist-ssr
 .vite
 .cloudbase
 cloudbaserc.json
+data

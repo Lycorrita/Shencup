@@ -1,25 +1,29 @@
 // Shencup · 赛事状态机（Pinia setup store）+ localStorage 续赛
 //
 // R1 缩圈：8 人/组，主动晋级 3~5（未选=当轮遗珠）。
-// 赛后救回：每轮结束后按赛程发遗珠卡（见 engine.rescueCards），
-//   从【当轮遗珠池】捞回（池不跨轮，过后清零；卡不累计）。
-//   用户可不用完卡，但进入下一轮的曲目数【必须为偶数】。
-// 八强（≤8）：遗珠补位至 8 → 排位决赛，排出精确 1~8 名。
+// PK 轮流程：duel（两两对决）→ swap（换位，自由交换 1 进 1 出，不改人数）→ rescue（遗珠卡捞回，改人数）。
+//   卡（换位/遗珠）均不强制使用完；非十强收口轮要求剩余为偶数。
+// 十强收口：某轮 duel 后赢家 n≤10 即进入十强角逐——n==10 发 1 换位卡直进；
+//   n<10 发 1 换位卡 +(10−n) 遗珠卡补满 10。
+// 十强决赛：附加赛(10→8) + 9/10 名赛 + 现有八强排位，精确排出 1~10 名。
+// 「捞回次数」= 复活 + 换位累计（统一记入 rescues）。
 
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import type { Song, Phase, RunSummary } from '@/types'
 import catalog from '@/data/catalog.json'
-import { shuffle, chunk, randomPairs, elimRange, rescueCards } from '@/engine/tournament'
+import { shuffle, chunk, randomPairs, elimRange, rescueCards, swapCards as swapCardsForRound } from '@/engine/tournament'
 
-const STORAGE_KEY = 'shencup:v6'
+const STORAGE_KEY = 'shencup:v7'
 const GROUP_SIZE = 8
-const FINALE_DUELS = 12
+const FINALE_DUELS = 15 // 附加赛2 + 9/10名赛1 + 八强排位12
 
-type KnockSub = 'rescue' | 'duel' | null
-type FStage = 'qf' | 'place57sf' | 'sf' | 'place7' | 'place5' | 'place3' | 'final'
+type KnockSub = 'rescue' | 'swap' | 'duel' | null
+type FStage = 'playin' | 'place9' | 'qf' | 'place57sf' | 'sf' | 'place7' | 'place5' | 'place3' | 'final'
 
 const STAGE_LABEL: Record<FStage, string> = {
+  playin: '十强附加赛',
+  place9: '第 9 名赛',
   qf: '八 强',
   place57sf: '5-8 名次赛',
   sf: '半 决 赛',
@@ -36,6 +40,13 @@ interface FPools {
   pl: string[]
   ff: string[]
   sl: string[]
+  byes: string[]
+  q8: string[]
+}
+
+interface SwapRec {
+  in: string
+  out: string
 }
 
 interface Snapshot {
@@ -53,9 +64,15 @@ interface Snapshot {
   duelIndex: number
   roundWinners: string[]
   cards: number
+  swapCards: number
+  roundSwaps: SwapRec[]
+  swapIn: string | null
+  swapOut: string | null
+  finalApproach: boolean
   rescues: Record<string, number>
   roundRescuedIds: string[]
   marked: string[]
+  tiers: string[][]
   finaleActive: boolean
   finaleDuelsDone: number
   fStage: FStage | null
@@ -67,7 +84,6 @@ interface Snapshot {
   ranks: (string | null)[]
   championId: string | null
   runnerUpId: string | null
-  semifinalIds: string[]
   startedAt: number
 }
 
@@ -85,7 +101,7 @@ export const useTournament = defineStore('tournament', () => {
 
   // 当轮遗珠池（不跨轮）
   const roundLosers = ref<string[]>([]) // 稳定列表（展示用）
-  const roundPool = ref<Set<string>>(new Set()) // 可捞回的集合
+  const roundPool = ref<Set<string>>(new Set()) // 可捞回/换入的集合
 
   // 淘汰赛
   const survivors = ref<string[]>([])
@@ -95,12 +111,18 @@ export const useTournament = defineStore('tournament', () => {
   const pairs = ref<[string, string][]>([])
   const duelIndex = ref(0)
   const roundWinners = ref<string[]>([])
-  const cards = ref(0)
-  const rescues = ref<Record<string, number>>({})
+  const cards = ref(0) // 遗珠卡
+  const swapCards = ref(0) // 换位卡
+  const roundSwaps = ref<SwapRec[]>([])
+  const swapIn = ref<string | null>(null)
+  const swapOut = ref<string | null>(null)
+  const finalApproach = ref(false) // 本轮是否为十强收口轮
+  const rescues = ref<Record<string, number>>({}) // 捞回次数（复活+换位）
   const roundRescuedIds = ref<Set<string>>(new Set())
-  const markedIds = ref<Set<string>>(new Set()) // 全程标记（方便遗珠池查找）
+  const markedIds = ref<Set<string>>(new Set())
+  const tiers = ref<string[][]>([]) // 每个 PK 轮的入场阵容（早→晚）
 
-  // 八强排位决赛
+  // 十强排位决赛
   const finaleActive = ref(false)
   const finaleDuelsDone = ref(0)
   const fStage = ref<FStage | null>(null)
@@ -108,12 +130,11 @@ export const useTournament = defineStore('tournament', () => {
   const fIdx = ref(0)
   const fWinners = ref<string[]>([])
   const fLosers = ref<string[]>([])
-  const fp = ref<FPools>({ wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] })
-  const ranks = ref<(string | null)[]>(new Array(9).fill(null))
+  const fp = ref<FPools>({ wf: [], lf: [], pw: [], pl: [], ff: [], sl: [], byes: [], q8: [] })
+  const ranks = ref<(string | null)[]>(new Array(11).fill(null))
 
   const championId = ref<string | null>(null)
   const runnerUpId = ref<string | null>(null)
-  const semifinalIds = ref<string[]>([])
   const startedAt = ref(0)
 
   const setRoundPool = (ids: string[]) => {
@@ -168,9 +189,15 @@ export const useTournament = defineStore('tournament', () => {
     duelIndex.value = 0
     roundWinners.value = []
     cards.value = 0
+    swapCards.value = 0
+    roundSwaps.value = []
+    swapIn.value = null
+    swapOut.value = null
+    finalApproach.value = false
     rescues.value = {}
     roundRescuedIds.value = new Set()
     markedIds.value = new Set()
+    tiers.value = []
     finaleActive.value = false
     finaleDuelsDone.value = 0
     fStage.value = null
@@ -178,11 +205,10 @@ export const useTournament = defineStore('tournament', () => {
     fIdx.value = 0
     fWinners.value = []
     fLosers.value = []
-    fp.value = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] }
-    ranks.value = new Array(9).fill(null)
+    fp.value = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [], byes: [], q8: [] }
+    ranks.value = new Array(11).fill(null)
     championId.value = null
     runnerUpId.value = null
-    semifinalIds.value = []
     startedAt.value = Date.now()
     phase.value = 'groups'
   }
@@ -207,7 +233,6 @@ export const useTournament = defineStore('tournament', () => {
 
   function replayGroup() {
     const idx = groupIndex.value
-    // 重玩本轮：把本组之前的 cuts 从池里移除，重新打乱本组，清空选择
     const cur = groups.value[idx]
     const curCuts = new Set(cur.filter((id) => !groupPicks.value.has(id)))
     setRoundPool(roundLosers.value.filter((id) => !curCuts.has(id)))
@@ -219,23 +244,26 @@ export const useTournament = defineStore('tournament', () => {
 
   function enterKnockout() {
     survivors.value = shuffle(survivors.value)
-    roundNumber.value = 0 // 缩圈赛后救回阶段
+    roundNumber.value = 0 // 缩圈赛后救回阶段（无换位）
+    finalApproach.value = false
     phase.value = 'knockout'
     beginRescueStage()
   }
 
   /* ============ 赛后救回阶段 ============ */
   function beginRescueStage() {
-    cards.value = rescueCards(roundNumber.value, survivors.value.length)
+    // 十强收口轮：补到 10；否则按赛程发遗珠卡
+    cards.value = finalApproach.value
+      ? Math.max(0, 10 - survivors.value.length)
+      : rescueCards(roundNumber.value, survivors.value.length)
     roundRescuedIds.value = new Set()
     knockSub.value = 'rescue'
   }
 
-  /** 救回：反复点选切换（误触可取消） */
+  /** 救回：反复点选切换（误触可取消）。候选列表 roundLosers 保持稳定，已捞回的仍高亮、再点取消。 */
   function rescue(id: string) {
     if (knockSub.value !== 'rescue') return
     if (roundRescuedIds.value.has(id)) {
-      // 取消捞回
       survivors.value = survivors.value.filter((x) => x !== id)
       roundPool.value = new Set([...roundPool.value, id])
       bumpRescue(id, -1)
@@ -252,49 +280,89 @@ export const useTournament = defineStore('tournament', () => {
     }
   }
 
-  /** 进入下一轮要求：剩余为偶数 */
-  const canEndRescue = computed(() => survivors.value.length % 2 === 0)
+  /** 进入下一阶段：十强收口轮要求正好 10；否则偶数 */
+  const canEndRescue = computed(() =>
+    finalApproach.value ? survivors.value.length === 10 : survivors.value.length % 2 === 0,
+  )
 
   function endRescue() {
     if (!canEndRescue.value) return
-    if (survivors.value.length <= 8) fillToEight()
     clearRoundPool()
     roundRescuedIds.value = new Set()
     cards.value = 0
-    if (survivors.value.length <= 8) {
+    if (finalApproach.value) {
       enterFinale()
       return
     }
     startRound()
   }
 
-  /** 八强补位：从当轮池补到 8 */
-  function fillToEight() {
-    while (survivors.value.length < 8 && roundPool.value.size > 0) {
-      const cand = [...roundPool.value].pop()
-      if (!cand) break
-      survivors.value = [...survivors.value, cand]
-      const s = new Set(roundPool.value)
-      s.delete(cand)
-      roundPool.value = s
-      bumpRescue(cand, 1)
-    }
+  /* ============ 换位阶段（PK 轮 duel 之后、rescue 之前） ============ */
+  function beginSwapStage() {
+    swapCards.value = finalApproach.value ? 1 : swapCardsForRound(roundNumber.value)
+    roundSwaps.value = []
+    swapIn.value = null
+    swapOut.value = null
+    knockSub.value = 'swap'
+  }
+
+  function selectSwapIn(id: string) {
+    if (knockSub.value !== 'swap' || !roundPool.value.has(id)) return
+    swapIn.value = swapIn.value === id ? null : id
+  }
+  function selectSwapOut(id: string) {
+    if (knockSub.value !== 'swap' || !survivors.value.includes(id)) return
+    swapOut.value = swapOut.value === id ? null : id
+  }
+  const canConfirmSwap = computed(
+    () => swapCards.value > 0 && !!swapIn.value && !!swapOut.value && swapIn.value !== swapOut.value,
+  )
+  function confirmSwap() {
+    if (!canConfirmSwap.value) return
+    const inId = swapIn.value!
+    const outId = swapOut.value!
+    // 晋级者：outId → inId
+    survivors.value = survivors.value.map((id) => (id === outId ? inId : id))
+    // 池：移除 inId，加入 outId
+    const newPool = [...roundPool.value].filter((x) => x !== inId)
+    newPool.push(outId)
+    setRoundPool(newPool)
+    bumpRescue(inId, 1) // 换入记 1 次捞回
+    swapCards.value = swapCards.value - 1
+    roundSwaps.value = [...roundSwaps.value, { in: inId, out: outId }]
+    swapIn.value = null
+    swapOut.value = null
+  }
+  function undoLastSwap() {
+    const last = roundSwaps.value[roundSwaps.value.length - 1]
+    if (!last) return
+    const inId = last.in
+    const outId = last.out
+    survivors.value = survivors.value.map((id) => (id === inId ? outId : id))
+    const newPool = [...roundPool.value].filter((x) => x !== outId)
+    newPool.push(inId)
+    setRoundPool(newPool)
+    bumpRescue(inId, -1)
+    swapCards.value = swapCards.value + 1
+    roundSwaps.value = roundSwaps.value.slice(0, -1)
+    swapIn.value = null
+    swapOut.value = null
+  }
+  function endSwap() {
+    beginRescueStage()
   }
 
   /* ============ 淘汰赛轮 ============ */
   function startRound() {
     roundNumber.value++
     if (roundNumber.value === 1) knockStart.value = survivors.value.length
-    // 防御：异常状态（如脏存档恢复）下队伍过小，直接进决赛，避免卡死
+    tiers.value = [...tiers.value, [...survivors.value]] // 记录该轮入场阵容（梯队）
+    // 防御：异常状态下直接决出冠军，避免卡死
     if (survivors.value.length <= 1) {
       if (survivors.value.length === 1) {
         championId.value = survivors.value[0]
         phase.value = 'champion'
       }
-      return
-    }
-    if (survivors.value.length <= 8) {
-      enterFinale()
       return
     }
     pairs.value = randomPairs(survivors.value) // 进入轮必为偶数
@@ -309,38 +377,75 @@ export const useTournament = defineStore('tournament', () => {
     if (knockSub.value !== 'duel') return
     const p = pairs.value[duelIndex.value]
     if (!p) return
-    const loser = winnerId === p[0] ? p[1] : p[0]
     roundWinners.value.push(winnerId)
     duelIndex.value++
     if (duelIndex.value >= pairs.value.length) endDuels()
   }
 
-  function endDuels() {
-    survivors.value = [...roundWinners.value]
-    setRoundPool(pairs.value.flatMap((p) => [p[0], p[1]]).filter((id) => !roundWinners.value.includes(id)))
-    beginRescueStage()
+  /** 返回上一步：撤销当前轮/当前决赛阶段内最近一次对决选择（防误触） */
+  const canUndoPick = computed(() =>
+    finaleActive.value ? fIdx.value > 0 : knockSub.value === 'duel' && duelIndex.value > 0,
+  )
+  function undoPick() {
+    if (finaleActive.value) {
+      if (fIdx.value > 0) {
+        fIdx.value--
+        fWinners.value = fWinners.value.slice(0, -1)
+        fLosers.value = fLosers.value.slice(0, -1)
+        finaleDuelsDone.value = Math.max(0, finaleDuelsDone.value - 1)
+      }
+      return
+    }
+    if (knockSub.value === 'duel' && duelIndex.value > 0) {
+      duelIndex.value--
+      roundWinners.value = roundWinners.value.slice(0, -1)
+    }
   }
 
-  /* ---------- 八强排位决赛 ---------- */
+  function endDuels() {
+    survivors.value = [...roundWinners.value]
+    setRoundPool(
+      pairs.value.flatMap((p) => [p[0], p[1]]).filter((id) => !roundWinners.value.includes(id)),
+    )
+    // 本轮对决赢家 n：≤10 即十强收口轮
+    finalApproach.value = survivors.value.length <= 10
+    beginSwapStage()
+  }
+
+  /* ---------- 十强排位决赛 ---------- */
   function enterFinale() {
     finaleActive.value = true
     finaleDuelsDone.value = 0
-    fp.value = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] }
-    ranks.value = new Array(9).fill(null)
-    startFStage('qf')
+    fp.value = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [], byes: [], q8: [] }
+    ranks.value = new Array(11).fill(null)
+    startFStage('playin')
   }
 
   function startFStage(stage: FStage) {
     fStage.value = stage
     let input: string[] = []
-    if (stage === 'qf') input = survivors.value
+    if (stage === 'playin') input = survivors.value
+    else if (stage === 'place9') input = fp.value.lf
+    else if (stage === 'qf') input = fp.value.q8
     else if (stage === 'place57sf') input = fp.value.lf
     else if (stage === 'sf') input = fp.value.wf
     else if (stage === 'place7') input = fp.value.pl
     else if (stage === 'place5') input = fp.value.pw
     else if (stage === 'place3') input = fp.value.sl
     else if (stage === 'final') input = fp.value.ff
-    fPairs.value = randomPairs(input)
+
+    if (stage === 'playin') {
+      // 10 首：随机取 4 打 2 场，余 6 轮空
+      const a = shuffle(input)
+      const fighters = a.slice(0, 4)
+      fp.value = { ...fp.value, byes: a.slice(4) }
+      fPairs.value = [
+        [fighters[0], fighters[1]],
+        [fighters[2], fighters[3]],
+      ]
+    } else {
+      fPairs.value = randomPairs(input)
+    }
     fIdx.value = 0
     fWinners.value = []
     fLosers.value = []
@@ -362,7 +467,15 @@ export const useTournament = defineStore('tournament', () => {
     const w = [...fWinners.value]
     const l = [...fLosers.value]
     const stage = fStage.value
-    if (stage === 'qf') {
+    if (stage === 'playin') {
+      // 2 胜 + 6 轮空 → 八强；2 败 → 9/10 名赛
+      fp.value = { ...fp.value, q8: [...w, ...fp.value.byes], lf: l }
+      startFStage('place9')
+    } else if (stage === 'place9') {
+      ranks.value = setRank(ranks.value, 9, w[0])
+      ranks.value = setRank(ranks.value, 10, l[0])
+      startFStage('qf')
+    } else if (stage === 'qf') {
       fp.value = { ...fp.value, wf: w, lf: l }
       startFStage('place57sf')
     } else if (stage === 'place57sf') {
@@ -382,7 +495,6 @@ export const useTournament = defineStore('tournament', () => {
     } else if (stage === 'place3') {
       ranks.value = setRank(ranks.value, 3, w[0])
       ranks.value = setRank(ranks.value, 4, l[0])
-      semifinalIds.value = [w[0], l[0]]
       startFStage('final')
     } else if (stage === 'final') {
       ranks.value = setRank(ranks.value, 1, w[0])
@@ -435,7 +547,7 @@ export const useTournament = defineStore('tournament', () => {
       : 0
   })
   const progressText = computed(() => {
-    if (finaleActive.value) return `排位决赛 ${finaleDuelsDone.value}/${FINALE_DUELS}`
+    if (finaleActive.value) return `十强排位 ${finaleDuelsDone.value}/${FINALE_DUELS}`
     if (roundNumber.value === 0) return `剩余 ${survivors.value.length}`
     return `剩余 ${survivors.value.length} / ${knockStart.value}`
   })
@@ -448,11 +560,9 @@ export const useTournament = defineStore('tournament', () => {
   const runnerUp = computed(() =>
     runnerUpId.value ? byId.value.get(runnerUpId.value) || null : null,
   )
-  const semifinalists = computed(() =>
-    semifinalIds.value.map((id) => byId.value.get(id)!).filter(Boolean),
-  )
+  /** 精确 1~10 名（index 0 = 冠军） */
   const ranking = computed(() =>
-    ranks.value.slice(1, 9).map((id) => (id ? byId.value.get(id) || null : null)),
+    ranks.value.slice(1, 11).map((id) => (id ? byId.value.get(id) || null : null)),
   )
   const rescuedSongs = computed(() =>
     Object.entries(rescues.value)
@@ -464,12 +574,35 @@ export const useTournament = defineStore('tournament', () => {
   const rescueCandidates = computed(() =>
     roundLosers.value.map((id) => byId.value.get(id)!).filter(Boolean),
   )
+  /** 换出候选 = 当前晋级者 */
+  const swapOutCandidates = computed(() =>
+    survivors.value.map((id) => byId.value.get(id)!).filter(Boolean),
+  )
+
+  function revivesOf(id: string) {
+    return rescues.value[id] || 0
+  }
+  /** 皇族：十强内按捞回次数升序前三 */
+  const royaltyTop3 = computed(() => {
+    const ids = ranks.value.slice(1, 11).filter(Boolean) as string[]
+    return ids
+      .map((id) => ({ song: byId.value.get(id)!, revives: rescues.value[id] || 0 }))
+      .filter((x) => x.song)
+      .sort((a, b) => a.revives - b.revives)
+      .slice(0, 3)
+  })
+  /** 梯队（每个 PK 轮入场阵容，早→晚） */
+  const allTiers = computed(() => tiers.value)
+  const tier1 = computed(() => tiers.value[tiers.value.length - 1] || []) // 倒数第一轮
+  const tier2 = computed(() => tiers.value[tiers.value.length - 2] || []) // 倒数第二轮
 
   const summary = computed<RunSummary>(() => ({
+    runId: startedAt.value,
     championId: championId.value,
     runnerUpId: runnerUpId.value,
-    semifinalIds: [...semifinalIds.value],
+    top10Ids: ranks.value.slice(1, 11).filter((x): x is string => !!x),
     rescues: { ...rescues.value },
+    tiers: tiers.value.map((t) => [...t]),
   }))
 
   const hasProgress = computed(() => phase.value !== 'home')
@@ -491,9 +624,15 @@ export const useTournament = defineStore('tournament', () => {
       duelIndex: duelIndex.value,
       roundWinners: roundWinners.value,
       cards: cards.value,
+      swapCards: swapCards.value,
+      roundSwaps: roundSwaps.value,
+      swapIn: swapIn.value,
+      swapOut: swapOut.value,
+      finalApproach: finalApproach.value,
       rescues: rescues.value,
       roundRescuedIds: [...roundRescuedIds.value],
       marked: [...markedIds.value],
+      tiers: tiers.value,
       finaleActive: finaleActive.value,
       finaleDuelsDone: finaleDuelsDone.value,
       fStage: fStage.value,
@@ -505,7 +644,6 @@ export const useTournament = defineStore('tournament', () => {
       ranks: ranks.value,
       championId: championId.value,
       runnerUpId: runnerUpId.value,
-      semifinalIds: semifinalIds.value,
       startedAt: startedAt.value,
     }
   }
@@ -525,9 +663,15 @@ export const useTournament = defineStore('tournament', () => {
     duelIndex.value = s.duelIndex || 0
     roundWinners.value = s.roundWinners || []
     cards.value = s.cards || 0
+    swapCards.value = s.swapCards || 0
+    roundSwaps.value = s.roundSwaps || []
+    swapIn.value = s.swapIn ?? null
+    swapOut.value = s.swapOut ?? null
+    finalApproach.value = !!s.finalApproach
     rescues.value = s.rescues || {}
     roundRescuedIds.value = new Set(s.roundRescuedIds || [])
     markedIds.value = new Set(s.marked || [])
+    tiers.value = s.tiers || []
     finaleActive.value = !!s.finaleActive
     finaleDuelsDone.value = s.finaleDuelsDone || 0
     fStage.value = (s.fStage as FStage) ?? null
@@ -535,11 +679,10 @@ export const useTournament = defineStore('tournament', () => {
     fIdx.value = s.fIdx || 0
     fWinners.value = s.fWinners || []
     fLosers.value = s.fLosers || []
-    fp.value = s.fp || { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] }
-    ranks.value = s.ranks || new Array(9).fill(null)
+    fp.value = s.fp || { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [], byes: [], q8: [] }
+    ranks.value = s.ranks || new Array(11).fill(null)
     championId.value = s.championId ?? null
     runnerUpId.value = s.runnerUpId ?? null
-    semifinalIds.value = s.semifinalIds || []
     startedAt.value = s.startedAt || 0
   }
 
@@ -582,9 +725,15 @@ export const useTournament = defineStore('tournament', () => {
     duelIndex.value = 0
     roundWinners.value = []
     cards.value = 0
+    swapCards.value = 0
+    roundSwaps.value = []
+    swapIn.value = null
+    swapOut.value = null
+    finalApproach.value = false
     rescues.value = {}
     roundRescuedIds.value = new Set()
     markedIds.value = new Set()
+    tiers.value = []
     finaleActive.value = false
     finaleDuelsDone.value = 0
     fStage.value = null
@@ -592,11 +741,10 @@ export const useTournament = defineStore('tournament', () => {
     fIdx.value = 0
     fWinners.value = []
     fLosers.value = []
-    fp.value = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] }
-    ranks.value = new Array(9).fill(null)
+    fp.value = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [], byes: [], q8: [] }
+    ranks.value = new Array(11).fill(null)
     championId.value = null
     runnerUpId.value = null
-    semifinalIds.value = []
     startedAt.value = 0
     localStorage.removeItem(STORAGE_KEY)
   }
@@ -617,9 +765,15 @@ export const useTournament = defineStore('tournament', () => {
       duelIndex,
       roundWinners,
       cards,
+      swapCards,
+      roundSwaps,
+      swapIn,
+      swapOut,
+      finalApproach,
       rescues,
       roundRescuedIds,
       markedIds,
+      tiers,
       finaleActive,
       finaleDuelsDone,
       fStage,
@@ -631,7 +785,6 @@ export const useTournament = defineStore('tournament', () => {
       ranks,
       championId,
       runnerUpId,
-      semifinalIds,
     ],
     persist,
     { deep: true },
@@ -668,6 +821,19 @@ export const useTournament = defineStore('tournament', () => {
     endRescue,
     markedIds,
     toggleMark,
+    // swap
+    swapCards,
+    roundSwaps,
+    swapIn,
+    swapOut,
+    swapOutCandidates,
+    canConfirmSwap,
+    selectSwapIn,
+    selectSwapOut,
+    confirmSwap,
+    undoLastSwap,
+    endSwap,
+    finalApproach,
     // knockout
     survivors,
     knockStart,
@@ -685,12 +851,18 @@ export const useTournament = defineStore('tournament', () => {
     duelInRound,
     duelsInRound,
     pick,
+    undoPick,
+    canUndoPick,
     // result
     champion,
     runnerUp,
-    semifinalists,
     ranking,
     rescuedSongs,
+    royaltyTop3,
+    allTiers,
+    tier1,
+    tier2,
+    revivesOf,
     summary,
     // lifecycle
     hasProgress,

@@ -1,7 +1,7 @@
 {
   "artist": "周深",
   "generatedAt": "2026-07-23T11:24:19.816Z",
-  "count": 326,
+  "count": 530,
   "songs": [
     {
       "id": "zs-001",
@@ -9,11 +9,8 @@
       "album": "2015.08.08",
       "year": 2015,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-002",
@@ -21,11 +18,8 @@
       "album": "2016.05.20",
       "year": 2016,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-003",
@@ -33,11 +27,8 @@
       "album": "2016.08.08",
       "year": 2016,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-004",
@@ -45,11 +36,8 @@
       "album": "2016.10.25",
       "year": 2016,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-005",
@@ -57,11 +45,8 @@
       "album": "2017.02.10",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-006",
@@ -69,11 +54,8 @@
       "album": "2017.04.21",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-007",
@@ -81,11 +63,8 @@
       "album": "2017.06.12",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-008",
@@ -93,11 +72,8 @@
       "album": "2017.06.21",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-009",
@@ -105,11 +81,8 @@
       "album": "2017.08.13",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-010",
@@ -117,11 +90,8 @@
       "album": "2017.10.02",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-011",
@@ -129,11 +99,8 @@
       "album": "2017.10.24",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-012",
@@ -141,11 +108,8 @@
       "album": "2017.10.27",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-013",
@@ -153,11 +117,8 @@
       "album": "2017.11.02",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-014",
@@ -165,11 +126,8 @@
       "album": "2017.11.06",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-015",
@@ -177,11 +135,8 @@
       "album": "2017.11.06",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-016",
@@ -189,11 +144,8 @@
       "album": "2017.11.06",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-017",
@@ -201,11 +153,8 @@
       "album": "2017.11.06",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-018",
@@ -213,11 +162,8 @@
       "album": "2017.11.06",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "深的深"
     },
     {
       "id": "zs-019",
@@ -225,11 +171,8 @@
       "album": "2017.11.30",
       "year": 2017,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-020",
@@ -237,11 +180,8 @@
       "album": "2018.01.10",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-021",
@@ -249,11 +189,8 @@
       "album": "2018.03.13",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-022",
@@ -261,11 +198,8 @@
       "album": "2018.04.24",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-023",
@@ -273,11 +207,8 @@
       "album": "2018.05.08",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "周深2018巡回演唱会宣传曲"
     },
     {
       "id": "zs-024",
@@ -285,11 +216,8 @@
       "album": "2018.05.20",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-025",
@@ -297,11 +225,8 @@
       "album": "2018.06.27",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-026",
@@ -309,11 +234,8 @@
       "album": "2018.06.29",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-027",
@@ -321,11 +243,8 @@
       "album": "2018.07.03",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-028",
@@ -333,11 +252,8 @@
       "album": "2018.07.05",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-029",
@@ -345,11 +261,8 @@
       "album": "2018.08.10",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-030",
@@ -357,11 +270,8 @@
       "album": "2018.08.15",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-031",
@@ -369,11 +279,8 @@
       "album": "2018.09.18",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-032",
@@ -381,11 +288,8 @@
       "album": "2018.09.29",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-033",
@@ -393,11 +297,8 @@
       "album": "2018.09.30",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-034",
@@ -405,11 +306,8 @@
       "album": "2018.10.02",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-035",
@@ -417,11 +315,8 @@
       "album": "2018.10.16",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-036",
@@ -429,11 +324,8 @@
       "album": "2018.10.18",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-037",
@@ -441,11 +333,8 @@
       "album": "2018.11.21",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-038",
@@ -453,11 +342,8 @@
       "album": "2018.11.27",
       "year": 2018,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-039",
@@ -465,11 +351,8 @@
       "album": "2019.01.09",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-040",
@@ -477,11 +360,8 @@
       "album": "2019.03.05",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-041",
@@ -489,11 +369,8 @@
       "album": "2019.04.04",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-042",
@@ -501,11 +378,8 @@
       "album": "2019.04.12",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-043",
@@ -513,11 +387,8 @@
       "album": "2019.05.28",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-044",
@@ -525,11 +396,8 @@
       "album": "2019.06.29",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-045",
@@ -537,11 +405,8 @@
       "album": "2019.07.28",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-046",
@@ -549,11 +414,8 @@
       "album": "2019.07.29",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-047",
@@ -561,11 +423,8 @@
       "album": "2019.08.28",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-048",
@@ -573,11 +432,8 @@
       "album": "2019.09.06",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-049",
@@ -585,11 +441,8 @@
       "album": "2019.09.08",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-050",
@@ -597,11 +450,8 @@
       "album": "2019.10.10",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-051",
@@ -609,11 +459,8 @@
       "album": "2019.10.17",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-052",
@@ -621,11 +468,8 @@
       "album": "2019.10.23",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-053",
@@ -633,11 +477,8 @@
       "album": "2019.11.05",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "周深C-929星球巡回演唱会主题曲"
     },
     {
       "id": "zs-054",
@@ -645,11 +486,8 @@
       "album": "2019.11.08",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-055",
@@ -657,11 +495,8 @@
       "album": "2019.11.11",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-056",
@@ -669,11 +504,8 @@
       "album": "2019.11.21",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-057",
@@ -681,11 +513,8 @@
       "album": "2019.12.07",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-058",
@@ -693,11 +522,8 @@
       "album": "2019.12.21",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-059",
@@ -705,11 +531,8 @@
       "album": "2019.12.23",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-060",
@@ -717,11 +540,8 @@
       "album": "2019.12.27",
       "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-061",
@@ -729,11 +549,8 @@
       "album": "2020.01.08",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-062",
@@ -741,11 +558,8 @@
       "album": "2020.01.17",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-063",
@@ -753,11 +567,8 @@
       "album": "2020.01.20",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-064",
@@ -765,11 +576,8 @@
       "album": "2020.02.16",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-065",
@@ -777,11 +585,8 @@
       "album": "2020.03.10",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-066",
@@ -789,11 +594,8 @@
       "album": "2020.03.18",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-067",
@@ -801,11 +603,8 @@
       "album": "2020.03.27",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-068",
@@ -813,11 +612,8 @@
       "album": "2020.04.01",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-069",
@@ -825,11 +621,8 @@
       "album": "2020.04.13",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-070",
@@ -837,11 +630,8 @@
       "album": "2020.04.29",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-071",
@@ -849,11 +639,8 @@
       "album": "2020.05.14",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-072",
@@ -861,11 +648,8 @@
       "album": "2020.05.19",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-073",
@@ -873,11 +657,8 @@
       "album": "2020.05.25",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-074",
@@ -885,11 +666,8 @@
       "album": "2020.05.27",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-075",
@@ -897,11 +675,8 @@
       "album": "2020.06.08",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-076",
@@ -909,11 +684,8 @@
       "album": "2020.06.28",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-077",
@@ -921,11 +693,8 @@
       "album": "2020.06.29",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-078",
@@ -933,11 +702,8 @@
       "album": "2020.07.03",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-079",
@@ -945,11 +711,8 @@
       "album": "2020.07.06",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-080",
@@ -957,11 +720,8 @@
       "album": "2020.07.08",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-081",
@@ -969,11 +729,8 @@
       "album": "2020.07.16",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-082",
@@ -981,11 +738,8 @@
       "album": "2020.07.20",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-083",
@@ -993,11 +747,8 @@
       "album": "2020.07.25",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-084",
@@ -1005,11 +756,8 @@
       "album": "2020.08.03",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-085",
@@ -1017,11 +765,8 @@
       "album": "2020.08.25",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-086",
@@ -1029,11 +774,8 @@
       "album": "2020.10.03",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-087",
@@ -1041,11 +783,8 @@
       "album": "2020.10.07",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-088",
@@ -1053,11 +792,8 @@
       "album": "2020.11.05",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-089",
@@ -1065,11 +801,8 @@
       "album": "2020.11.22",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-090",
@@ -1077,11 +810,8 @@
       "album": "2020.12.07",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-091",
@@ -1089,11 +819,8 @@
       "album": "2020.12.16",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-092",
@@ -1101,11 +828,8 @@
       "album": "2020.12.18",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-093",
@@ -1113,11 +837,8 @@
       "album": "2020.12.29",
       "year": 2020,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-094",
@@ -1125,11 +846,8 @@
       "album": "2021.01.08",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-095",
@@ -1137,11 +855,8 @@
       "album": "2021.01.20",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-096",
@@ -1149,11 +864,8 @@
       "album": "2021.01.22",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-097",
@@ -1161,11 +873,8 @@
       "album": "2021.01.23",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-098",
@@ -1173,11 +882,8 @@
       "album": "2021.01.25",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-099",
@@ -1185,11 +891,8 @@
       "album": "2021.01.27",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-100",
@@ -1197,11 +900,8 @@
       "album": "2021.01.29",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-101",
@@ -1209,11 +909,8 @@
       "album": "2021.01.30",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-102",
@@ -1221,11 +918,8 @@
       "album": "2021.02.10",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-103",
@@ -1233,11 +927,8 @@
       "album": "2021.02.14",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-104",
@@ -1245,11 +936,8 @@
       "album": "2021.02.14",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-105",
@@ -1257,11 +945,8 @@
       "album": "2021.02.22",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-106",
@@ -1269,11 +954,8 @@
       "album": "2021.03.20",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-107",
@@ -1281,11 +963,8 @@
       "album": "2021.04.12",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-108",
@@ -1293,11 +972,8 @@
       "album": "2021.04.20",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-109",
@@ -1305,11 +981,8 @@
       "album": "2021.04.26",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-110",
@@ -1317,23 +990,17 @@
       "album": "2021.04.28",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-111",
-      "title": "田埂五月风",
+      "title": "田埂五月风（哼唱版）",
       "album": "2021.05.31",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-112",
@@ -1341,11 +1008,8 @@
       "album": "2021.06.09",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-113",
@@ -1353,11 +1017,8 @@
       "album": "2021.06.16",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-114",
@@ -1365,11 +1026,8 @@
       "album": "2021.06.25",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-115",
@@ -1377,11 +1035,8 @@
       "album": "2021.07.09",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-116",
@@ -1389,11 +1044,8 @@
       "album": "2021.07.15",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-117",
@@ -1401,11 +1053,8 @@
       "album": "2021.07.16",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-118",
@@ -1413,23 +1062,17 @@
       "album": "2021.07.23",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-119",
-      "title": "生活总该迎着光",
+      "title": "生活总该迎着光亮",
       "album": "2021.08.17",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-120",
@@ -1437,11 +1080,8 @@
       "album": "2021.08.18",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-121",
@@ -1449,11 +1089,8 @@
       "album": "2021.08.23",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-122",
@@ -1461,11 +1098,8 @@
       "album": "2021.08.27",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-123",
@@ -1473,11 +1107,8 @@
       "album": "2021.09.17",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-124",
@@ -1485,11 +1116,8 @@
       "album": "2021.09.20",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-125",
@@ -1497,11 +1125,8 @@
       "album": "2021.09.28",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-126",
@@ -1509,11 +1134,8 @@
       "album": "2021.10.01",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-127",
@@ -1521,11 +1143,8 @@
       "album": "2021.10.12",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-128",
@@ -1533,11 +1152,8 @@
       "album": "2021.10.16",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-129",
@@ -1545,11 +1161,8 @@
       "album": "2021.10.20",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-130",
@@ -1557,11 +1170,8 @@
       "album": "2021.10.24",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-131",
@@ -1569,11 +1179,8 @@
       "album": "2021.11.06",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-132",
@@ -1581,11 +1188,8 @@
       "album": "2021.11.09",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-133",
@@ -1593,11 +1197,8 @@
       "album": "2021.12.03",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-134",
@@ -1605,11 +1206,8 @@
       "album": "2021.12.09",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-135",
@@ -1617,11 +1215,8 @@
       "album": "2021.12.10",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-136",
@@ -1629,11 +1224,8 @@
       "album": "2021.12.15",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-137",
@@ -1641,11 +1233,8 @@
       "album": "2021.12.28",
       "year": 2021,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-138",
@@ -1653,11 +1242,8 @@
       "album": "2022.01.06",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-139",
@@ -1665,11 +1251,8 @@
       "album": "2022.01.10",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-140",
@@ -1677,11 +1260,8 @@
       "album": "2022.01.12",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-141",
@@ -1689,11 +1269,8 @@
       "album": "2022.01.21",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-142",
@@ -1701,11 +1278,8 @@
       "album": "2022.01.27",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-143",
@@ -1713,11 +1287,8 @@
       "album": "2022.02.07",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-144",
@@ -1725,11 +1296,8 @@
       "album": "2022.02.15",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-145",
@@ -1737,11 +1305,8 @@
       "album": "2022.02.19",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-146",
@@ -1749,11 +1314,8 @@
       "album": "2022.02.20",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-147",
@@ -1761,11 +1323,8 @@
       "album": "2022.02.22",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-148",
@@ -1773,11 +1332,8 @@
       "album": "2022.03.01",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-149",
@@ -1785,11 +1341,8 @@
       "album": "2022.03.16",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-150",
@@ -1797,11 +1350,8 @@
       "album": "2022.03.21",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-151",
@@ -1809,11 +1359,8 @@
       "album": "2022.04.17",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-152",
@@ -1821,11 +1368,8 @@
       "album": "2022.04.20",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-153",
@@ -1833,11 +1377,8 @@
       "album": "2022.04.24",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-154",
@@ -1845,11 +1386,8 @@
       "album": "2022.04.27",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-155",
@@ -1857,11 +1395,8 @@
       "album": "2022.04.29",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-156",
@@ -1869,11 +1404,8 @@
       "album": "2022.05.18",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-157",
@@ -1881,11 +1413,8 @@
       "album": "2022.05.19",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-158",
@@ -1893,11 +1422,8 @@
       "album": "2022.06.26",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-159",
@@ -1905,11 +1431,8 @@
       "album": "2022.06.29",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-160",
@@ -1917,11 +1440,8 @@
       "album": "2022.07.08",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-161",
@@ -1929,11 +1449,8 @@
       "album": "2022.07.13",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-162",
@@ -1941,11 +1458,8 @@
       "album": "2022.07.21",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-163",
@@ -1953,11 +1467,8 @@
       "album": "2022.07.24",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-164",
@@ -1965,11 +1476,8 @@
       "album": "2022.08.04",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-165",
@@ -1977,11 +1485,8 @@
       "album": "2022.08.11",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-166",
@@ -1989,11 +1494,8 @@
       "album": "2022.08.14",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-167",
@@ -2001,11 +1503,8 @@
       "album": "2022.08.17",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-168",
@@ -2013,11 +1512,8 @@
       "album": "2022.09.10",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-169",
@@ -2025,11 +1521,8 @@
       "album": "2022.09.26",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-170",
@@ -2037,11 +1530,8 @@
       "album": "2022.09.29",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-171",
@@ -2049,11 +1539,8 @@
       "album": "2022.10.12",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-172",
@@ -2061,11 +1548,8 @@
       "album": "2022.10.21",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-173",
@@ -2073,11 +1557,8 @@
       "album": "2022.10.30",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-174",
@@ -2085,11 +1566,8 @@
       "album": "2022.11.03",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-175",
@@ -2097,11 +1575,8 @@
       "album": "2022.11.12",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-176",
@@ -2109,11 +1584,8 @@
       "album": "2022.11.22",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-177",
@@ -2121,11 +1593,8 @@
       "album": "2022.11.28",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-178",
@@ -2133,11 +1602,8 @@
       "album": "2022.12.15",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-179",
@@ -2145,11 +1611,8 @@
       "album": "2022.12.26",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-180",
@@ -2157,11 +1620,8 @@
       "album": "2022.12.27",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-181",
@@ -2169,11 +1629,8 @@
       "album": "2022.12.30",
       "year": 2022,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-182",
@@ -2181,11 +1638,8 @@
       "album": "2023.01.14",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-183",
@@ -2193,11 +1647,8 @@
       "album": "2023.01.16",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-184",
@@ -2205,11 +1656,8 @@
       "album": "2023.01.17",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-185",
@@ -2217,11 +1665,8 @@
       "album": "2023.01.20",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-186",
@@ -2229,11 +1674,8 @@
       "album": "2023.01.23",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-187",
@@ -2241,11 +1683,8 @@
       "album": "2023.01.31",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-188",
@@ -2253,11 +1692,8 @@
       "album": "2023.02.20",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-189",
@@ -2265,11 +1701,8 @@
       "album": "2023.02.23",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-190",
@@ -2277,11 +1710,8 @@
       "album": "2023.03.04",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-191",
@@ -2289,11 +1719,8 @@
       "album": "2023.03.14",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-192",
@@ -2301,11 +1728,8 @@
       "album": "2023.04.25",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-193",
@@ -2313,11 +1737,8 @@
       "album": "2023.05.08",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-194",
@@ -2325,11 +1746,8 @@
       "album": "2023.05.10",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-195",
@@ -2337,11 +1755,8 @@
       "album": "2023.05.14",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-196",
@@ -2349,11 +1764,8 @@
       "album": "2023.05.28",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-197",
@@ -2361,11 +1773,8 @@
       "album": "2023.07.01",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-198",
@@ -2373,11 +1782,8 @@
       "album": "2023.07.21",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-199",
@@ -2385,11 +1791,8 @@
       "album": "2023.07.26",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-200",
@@ -2397,11 +1800,8 @@
       "album": "2023.08.16",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-201",
@@ -2409,11 +1809,8 @@
       "album": "2023.08.22",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-202",
@@ -2421,11 +1818,8 @@
       "album": "2023.09.06",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-203",
@@ -2433,11 +1827,8 @@
       "album": "2023.09.15",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-204",
@@ -2445,11 +1836,8 @@
       "album": "2023.09.19",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-205",
@@ -2457,11 +1845,8 @@
       "album": "2023.09.25",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-206",
@@ -2469,11 +1854,8 @@
       "album": "2023.11.01",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-207",
@@ -2481,11 +1863,8 @@
       "album": "2023.11.03",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-208",
@@ -2493,11 +1872,8 @@
       "album": "2023.11.04",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-209",
@@ -2505,11 +1881,8 @@
       "album": "2023.11.07",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-210",
@@ -2517,11 +1890,8 @@
       "album": "2023.11.10",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-211",
@@ -2529,11 +1899,8 @@
       "album": "2023.11.12",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-212",
@@ -2541,11 +1908,8 @@
       "album": "2023.11.20",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-213",
@@ -2553,11 +1917,8 @@
       "album": "2023.12.31",
       "year": 2023,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-214",
@@ -2565,11 +1926,8 @@
       "album": "2024.01.05",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-215",
@@ -2577,11 +1935,8 @@
       "album": "2024.01.10",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-216",
@@ -2589,11 +1944,8 @@
       "album": "2024.01.25",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-217",
@@ -2601,11 +1953,8 @@
       "album": "2024.02.06",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-218",
@@ -2613,11 +1962,8 @@
       "album": "2024.03.15",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-219",
@@ -2625,11 +1971,8 @@
       "album": "2024.03.20",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-220",
@@ -2637,11 +1980,8 @@
       "album": "2024.03.21",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-221",
@@ -2649,11 +1989,8 @@
       "album": "2024.03.31",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-222",
@@ -2661,11 +1998,8 @@
       "album": "2024.03.31",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-223",
@@ -2673,11 +2007,8 @@
       "album": "2024.04.17",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-224",
@@ -2685,11 +2016,8 @@
       "album": "2024.04.19",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-225",
@@ -2697,11 +2025,8 @@
       "album": "2024.04.23",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-226",
@@ -2709,11 +2034,8 @@
       "album": "2024.05.15",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-227",
@@ -2721,11 +2043,8 @@
       "album": "2024.05.19",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-228",
@@ -2733,11 +2052,8 @@
       "album": "2024.05.19",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-229",
@@ -2745,11 +2061,8 @@
       "album": "2024.05.19",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-230",
@@ -2757,11 +2070,8 @@
       "album": "2024.05.19",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-231",
@@ -2769,11 +2079,8 @@
       "album": "2024.05.23",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-232",
@@ -2781,11 +2088,8 @@
       "album": "2024.05.30",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-233",
@@ -2793,11 +2097,8 @@
       "album": "2024.06.05",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-234",
@@ -2805,11 +2106,8 @@
       "album": "2024.06.07",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-235",
@@ -2817,11 +2115,8 @@
       "album": "2024.06.08",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-236",
@@ -2829,11 +2124,8 @@
       "album": "2024.06.16",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-237",
@@ -2841,11 +2133,8 @@
       "album": "2024.06.23",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-238",
@@ -2853,11 +2142,8 @@
       "album": "2024.07.14",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-239",
@@ -2865,11 +2151,8 @@
       "album": "2024.07.22",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-240",
@@ -2877,11 +2160,8 @@
       "album": "2024.07.25",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-241",
@@ -2889,11 +2169,8 @@
       "album": "2024.07.29",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-242",
@@ -2901,11 +2178,8 @@
       "album": "2024.08.11",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-243",
@@ -2913,11 +2187,8 @@
       "album": "2024.08.12",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-244",
@@ -2925,11 +2196,8 @@
       "album": "2024.08.22",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-245",
@@ -2937,11 +2205,8 @@
       "album": "2024.08.25",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-246",
@@ -2949,11 +2214,8 @@
       "album": "2024.09.01",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-247",
@@ -2961,11 +2223,8 @@
       "album": "2024.09.08",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-248",
@@ -2973,11 +2232,8 @@
       "album": "2024.09.28",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-249",
@@ -2985,11 +2241,8 @@
       "album": "2024.09.29",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-250",
@@ -2997,11 +2250,8 @@
       "album": "2024.09.29",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "反深代词"
     },
     {
       "id": "zs-251",
@@ -3009,11 +2259,8 @@
       "album": "2024.10.02",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-252",
@@ -3021,11 +2268,8 @@
       "album": "2024.10.08",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-253",
@@ -3033,11 +2277,8 @@
       "album": "2024.11.06",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-254",
@@ -3045,11 +2286,8 @@
       "album": "2024.11.06",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-255",
@@ -3057,11 +2295,8 @@
       "album": "2024.11.28",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-256",
@@ -3069,11 +2304,8 @@
       "album": "2024.12.24",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-257",
@@ -3081,11 +2313,8 @@
       "album": "2024.12.25",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-258",
@@ -3093,11 +2322,8 @@
       "album": "2024.12.27",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-259",
@@ -3105,11 +2331,8 @@
       "album": "2024.12.29",
       "year": 2024,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-260",
@@ -3117,11 +2340,8 @@
       "album": "2025.01.04",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-261",
@@ -3129,11 +2349,8 @@
       "album": "2025.01.07",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-262",
@@ -3141,11 +2358,8 @@
       "album": "2025.01.20",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-263",
@@ -3153,11 +2367,8 @@
       "album": "2025.01.21",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-264",
@@ -3165,11 +2376,8 @@
       "album": "2025.01.24",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-265",
@@ -3177,11 +2385,8 @@
       "album": "2025.01.27",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-266",
@@ -3189,11 +2394,8 @@
       "album": "2025.02.05",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-267",
@@ -3201,11 +2403,8 @@
       "album": "2025.02.25",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-268",
@@ -3213,11 +2412,8 @@
       "album": "2025.04.29",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-269",
@@ -3225,11 +2421,8 @@
       "album": "2025.05.07",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-270",
@@ -3237,11 +2430,8 @@
       "album": "2025.05.10",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-271",
@@ -3249,11 +2439,8 @@
       "album": "2025.05.16",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-272",
@@ -3261,11 +2448,8 @@
       "album": "2025.05.18",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "小深情"
     },
     {
       "id": "zs-273",
@@ -3273,11 +2457,8 @@
       "album": "2025.05.26",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-274",
@@ -3285,11 +2466,8 @@
       "album": "2025.05.31",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "小深情"
     },
     {
       "id": "zs-275",
@@ -3297,11 +2475,8 @@
       "album": "2025.06.08",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-276",
@@ -3309,11 +2484,8 @@
       "album": "2025.06.15",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "小深情"
     },
     {
       "id": "zs-277",
@@ -3321,11 +2493,8 @@
       "album": "2025.06.19",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-278",
@@ -3333,11 +2502,8 @@
       "album": "2025.06.28",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "小深情"
     },
     {
       "id": "zs-279",
@@ -3345,11 +2511,8 @@
       "album": "2025.07.08",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-280",
@@ -3357,11 +2520,8 @@
       "album": "2025.07.25",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "小深情"
     },
     {
       "id": "zs-281",
@@ -3369,11 +2529,8 @@
       "album": "2025.08.04",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-282",
@@ -3381,11 +2538,8 @@
       "album": "2025.08.09",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "小深情"
     },
     {
       "id": "zs-283",
@@ -3393,11 +2547,8 @@
       "album": "2025.08.16",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-284",
@@ -3405,11 +2556,8 @@
       "album": "2025.08.17",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-285",
@@ -3417,11 +2565,8 @@
       "album": "2025.08.24",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-286",
@@ -3429,11 +2574,8 @@
       "album": "2025.08.26",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-287",
@@ -3441,11 +2583,8 @@
       "album": "2025.08.29",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-288",
@@ -3453,11 +2592,8 @@
       "album": "2025.09.10",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-289",
@@ -3465,11 +2601,8 @@
       "album": "2025.09.14",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-290",
@@ -3477,11 +2610,8 @@
       "album": "2025.09.29",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-291",
@@ -3489,11 +2619,8 @@
       "album": "2025.10.01",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-292",
@@ -3501,11 +2628,8 @@
       "album": "2025.10.11",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-293",
@@ -3513,11 +2637,8 @@
       "album": "2025.10.20",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-294",
@@ -3525,35 +2646,26 @@
       "album": "2025.10.23",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-295",
-      "title": "天海一心",
-      "album": "2025.11.08",
-      "year": 2025,
+      "title": "末日飞船",
+      "album": "2019.07.18",
+      "year": 2019,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": "末日飞船"
     },
     {
       "id": "zs-296",
-      "title": "天海一心",
+      "title": "天海一心（独唱版）",
       "album": "2025.11.12",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-297",
@@ -3561,11 +2673,8 @@
       "album": "2025.12.04",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-298",
@@ -3573,11 +2682,8 @@
       "album": "2025.12.15",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-299",
@@ -3585,11 +2691,8 @@
       "album": "2025.12.24",
       "year": 2025,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-300",
@@ -3597,11 +2700,8 @@
       "album": "2026.01.05",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-301",
@@ -3609,11 +2709,8 @@
       "album": "2026.01.23",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-302",
@@ -3621,11 +2718,8 @@
       "album": "2026.01.31",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-303",
@@ -3633,11 +2727,8 @@
       "album": "2026.02.07",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-304",
@@ -3645,11 +2736,8 @@
       "album": "2026.02.17",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-305",
@@ -3657,11 +2745,8 @@
       "album": "2026.02.18",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-306",
@@ -3669,11 +2754,8 @@
       "album": "2026.02.21",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-307",
@@ -3681,11 +2763,8 @@
       "album": "2026.03.07",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-308",
@@ -3693,11 +2772,8 @@
       "album": "2026.03.18",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-309",
@@ -3705,11 +2781,8 @@
       "album": "2026.03.25",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-310",
@@ -3717,11 +2790,8 @@
       "album": "2026.03.27",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-311",
@@ -3729,11 +2799,8 @@
       "album": "2026.04.01",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-312",
@@ -3741,11 +2808,8 @@
       "album": "2026.04.07",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-313",
@@ -3753,11 +2817,8 @@
       "album": "2026.04.10",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-314",
@@ -3765,11 +2826,8 @@
       "album": "2026.04.15",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-315",
@@ -3777,11 +2835,8 @@
       "album": "2026.04.22",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-316",
@@ -3789,11 +2844,8 @@
       "album": "2026.04.30",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-317",
@@ -3801,11 +2853,8 @@
       "album": "2026.05.04",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-318",
@@ -3813,11 +2862,8 @@
       "album": "2026.05.13",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-319",
@@ -3825,11 +2871,8 @@
       "album": "2026.06.06",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-320",
@@ -3837,11 +2880,8 @@
       "album": "2026.06.09",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-321",
@@ -3849,11 +2889,8 @@
       "album": "2026.06.17",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-322",
@@ -3861,11 +2898,8 @@
       "album": "2026.06.20",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-323",
@@ -3873,11 +2907,8 @@
       "album": "2026.06.25",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-324",
@@ -3885,11 +2916,8 @@
       "album": "2026.06.29",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-325",
@@ -3897,11 +2925,8 @@
       "album": "2026.07.08",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
-      "seed": 50
+      "seed": 50,
+      "note": ""
     },
     {
       "id": "zs-326",
@@ -3909,10 +2934,1843 @@
       "album": "2026.07.18",
       "year": 2026,
       "division": "录音室",
-      "lyricist": "",
-      "composer": "",
-      "arranger": "",
-      "producer": "",
+      "seed": 50,
+      "note": ""
+    },
+    {
+      "id": "zs-327",
+      "title": "卡西尼",
+      "album": "2019.07.18",
+      "year": 2019,
+      "division": "录音室",
+      "seed": 50,
+      "note": "末日飞船"
+    },
+    {
+      "id": "zs-328",
+      "title": "欢颜 (Live)",
+      "album": "2014",
+      "year": 2014,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国好声音第三季"
+    },
+    {
+      "id": "zs-329",
+      "title": "贝加尔湖畔 (Live)",
+      "album": "2014",
+      "year": 2014,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国好声音第三季"
+    },
+    {
+      "id": "zs-330",
+      "title": "美错 (Live)",
+      "album": "2015",
+      "year": 2015,
+      "division": "音综",
+      "seed": 50,
+      "note": "重返中国好声音第6期"
+    },
+    {
+      "id": "zs-331",
+      "title": "橄榄树 (Live)",
+      "album": "2015",
+      "year": 2015,
+      "division": "音综",
+      "seed": 50,
+      "note": "开门大吉"
+    },
+    {
+      "id": "zs-332",
+      "title": "有点意思+爱情36计+Play我呸+编号89757 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "挑战好声音第一期"
+    },
+    {
+      "id": "zs-333",
+      "title": "我的果汁分你一半 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "挑战好声音第五期"
+    },
+    {
+      "id": "zs-334",
+      "title": "舞娘 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "挑战好声音第八期"
+    },
+    {
+      "id": "zs-335",
+      "title": "好男人 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "挑战好声音第十期"
+    },
+    {
+      "id": "zs-336",
+      "title": "她说 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第一季"
+    },
+    {
+      "id": "zs-337",
+      "title": "我是真的爱你 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第一季"
+    },
+    {
+      "id": "zs-338",
+      "title": "我真的受伤了 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第一季"
+    },
+    {
+      "id": "zs-339",
+      "title": "身骑白马 (Live)",
+      "album": "2016",
+      "year": 2016,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第一季"
+    },
+    {
+      "id": "zs-340",
+      "title": "从前慢 (Live)",
+      "album": "2017",
+      "year": 2017,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国新歌声第二季"
+    },
+    {
+      "id": "zs-341",
+      "title": "大鱼（越剧版） (Live)",
+      "album": "2017",
+      "year": 2017,
+      "division": "音综",
+      "seed": 50,
+      "note": "拜见小师傅第二期"
+    },
+    {
+      "id": "zs-342",
+      "title": "雪落下的声音 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第三季"
+    },
+    {
+      "id": "zs-343",
+      "title": "莫斯科郊外的晚上 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第三季"
+    },
+    {
+      "id": "zs-344",
+      "title": "暗香 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "蒙面唱将猜猜猜第三季"
+    },
+    {
+      "id": "zs-345",
+      "title": "Time to Say Goodbye (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-346",
+      "title": "我的祖国 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-347",
+      "title": "斯卡布罗集市 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-348",
+      "title": "Caro Mio Ben (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-349",
+      "title": "Memory (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-350",
+      "title": "山楂树 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-351",
+      "title": "Think of Me (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-352",
+      "title": "跨越彩虹 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-353",
+      "title": "孤独的牧羊人 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-354",
+      "title": "月弯弯 (Live)",
+      "album": "2018",
+      "year": 2018,
+      "division": "音综",
+      "seed": 50,
+      "note": "声入人心第一季"
+    },
+    {
+      "id": "zs-355",
+      "title": "好的，晚安 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "这就是原创第五期"
+    },
+    {
+      "id": "zs-356",
+      "title": "怎么了 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "这就是原创第十期"
+    },
+    {
+      "id": "zs-357",
+      "title": "Digital Bath+再见荧火虫 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "一起乐队吧第六期"
+    },
+    {
+      "id": "zs-358",
+      "title": "彩色的黑 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "一起乐队吧第六期"
+    },
+    {
+      "id": "zs-359",
+      "title": "南溪号子好美妙 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "劳动号子第八期"
+    },
+    {
+      "id": "zs-360",
+      "title": "追 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-361",
+      "title": "月半小夜曲 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-362",
+      "title": "心如刀割 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-363",
+      "title": "野狼disco (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-364",
+      "title": "卡门组曲 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-365",
+      "title": "我爱他 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-366",
+      "title": "另一种乡愁 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-367",
+      "title": "那片海 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-368",
+      "title": "天下有情人 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-369",
+      "title": "大会堂演奏厅 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-370",
+      "title": "画 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-371",
+      "title": "你的名字我的姓氏 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-372",
+      "title": "希望 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-373",
+      "title": "南屏晚钟 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "中国梦之声.我们的歌第一季"
+    },
+    {
+      "id": "zs-374",
+      "title": "爱情转移+突如其来的爱情 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "我们的歌第二季"
+    },
+    {
+      "id": "zs-375",
+      "title": "无问 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第4期"
+    },
+    {
+      "id": "zs-376",
+      "title": "Monsters (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第5期"
+    },
+    {
+      "id": "zs-377",
+      "title": "达尼亚 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第6期"
+    },
+    {
+      "id": "zs-378",
+      "title": "有可能的夜晚 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第7期"
+    },
+    {
+      "id": "zs-379",
+      "title": "达拉崩吧 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第8期"
+    },
+    {
+      "id": "zs-380",
+      "title": "秦淮景+相思 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第9期"
+    },
+    {
+      "id": "zs-381",
+      "title": "自己按门铃自己听 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第10期"
+    },
+    {
+      "id": "zs-382",
+      "title": "不会拜拜的Disco (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《歌手.当打之年》第12期"
+    },
+    {
+      "id": "zs-383",
+      "title": "眼泪成诗 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《青春环游记2》第10期"
+    },
+    {
+      "id": "zs-384",
+      "title": "真夏的樱花 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《新手驾到》第10期"
+    },
+    {
+      "id": "zs-385",
+      "title": "芒种+左手指月 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《快乐大本营》"
+    },
+    {
+      "id": "zs-386",
+      "title": "敖包相会+九九艳阳天+火红的萨日朗+明天会更好 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《嘿！你在干嘛呢？》"
+    },
+    {
+      "id": "zs-387",
+      "title": "自由行走的花 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《王牌对王牌》第五季"
+    },
+    {
+      "id": "zs-388",
+      "title": "情是何物 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "经典咏流传第三季"
+    },
+    {
+      "id": "zs-389",
+      "title": "烟花易冷 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "流淌的歌声第二季"
+    },
+    {
+      "id": "zs-390",
+      "title": "星际列车 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "明日之子乐团季"
+    },
+    {
+      "id": "zs-391",
+      "title": "追梦人 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "跨界歌王5第九期"
+    },
+    {
+      "id": "zs-392",
+      "title": "俩俩相忘 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "跨界歌王5第九期"
+    },
+    {
+      "id": "zs-393",
+      "title": "她是黯淡星 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "乐队的夏天2"
+    },
+    {
+      "id": "zs-394",
+      "title": "天堂岛之歌 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《明星大侦探》"
+    },
+    {
+      "id": "zs-395",
+      "title": "我们一起闯 (Live)",
+      "album": "2021",
+      "year": 2021,
+      "division": "音综",
+      "seed": 50,
+      "note": "创造营2021第六期"
+    },
+    {
+      "id": "zs-396",
+      "title": "Champions (Live)",
+      "album": "2021",
+      "year": 2021,
+      "division": "音综",
+      "seed": 50,
+      "note": "创造营2021第十期"
+    },
+    {
+      "id": "zs-397",
+      "title": "克卜勒 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-398",
+      "title": "算你狠 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-399",
+      "title": "玫瑰少年 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-400",
+      "title": "哭砂 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-401",
+      "title": "冷酷到底 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-402",
+      "title": "调查中 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-403",
+      "title": "City of Stars (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-404",
+      "title": "贼 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-405",
+      "title": "情歌 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-406",
+      "title": "一路生花 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《天赐的声音》第三季"
+    },
+    {
+      "id": "zs-407",
+      "title": "记念 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《为歌而赞》第二季"
+    },
+    {
+      "id": "zs-408",
+      "title": "回到过去 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-409",
+      "title": "欢乐中国年 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-410",
+      "title": "听见下雨的声音 (Live)",
+      "album": "2022",
+      "year": 2022,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-411",
+      "title": "Andy (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-412",
+      "title": "花火 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-413",
+      "title": "好春光 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-414",
+      "title": "月光 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-415",
+      "title": "家后 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-416",
+      "title": "水姻缘 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《时光音乐会》第二季"
+    },
+    {
+      "id": "zs-417",
+      "title": "Yesterday (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《舞台2023》"
+    },
+    {
+      "id": "zs-418",
+      "title": "跟着你到天边 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第一期"
+    },
+    {
+      "id": "zs-419",
+      "title": "岁月 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第二期"
+    },
+    {
+      "id": "zs-420",
+      "title": "桃花诺 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第三期"
+    },
+    {
+      "id": "zs-421",
+      "title": "爱的供养 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第四期"
+    },
+    {
+      "id": "zs-422",
+      "title": "凄美地 (Live)",
+      "album": "2023",
+      "year": 2023,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第五期"
+    },
+    {
+      "id": "zs-423",
+      "title": "睫毛弯弯 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第六期"
+    },
+    {
+      "id": "zs-424",
+      "title": "逆光 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第七期"
+    },
+    {
+      "id": "zs-425",
+      "title": "相见不如怀念 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第八期"
+    },
+    {
+      "id": "zs-426",
+      "title": "听 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第九期"
+    },
+    {
+      "id": "zs-427",
+      "title": "易燃易爆炸 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第十期"
+    },
+    {
+      "id": "zs-428",
+      "title": "异乡人 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第十一期"
+    },
+    {
+      "id": "zs-429",
+      "title": "泪桥 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《声生不息·家年华》第十二期"
+    },
+    {
+      "id": "zs-430",
+      "title": "沉默的羔羊 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第一期"
+    },
+    {
+      "id": "zs-431",
+      "title": "只字不提 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第一期"
+    },
+    {
+      "id": "zs-432",
+      "title": "颠倒之间 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第二期"
+    },
+    {
+      "id": "zs-433",
+      "title": "等你 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第三期"
+    },
+    {
+      "id": "zs-434",
+      "title": "只与我有关联 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第四期"
+    },
+    {
+      "id": "zs-435",
+      "title": "MINE (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第六期"
+    },
+    {
+      "id": "zs-436",
+      "title": "忘了我 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第六期"
+    },
+    {
+      "id": "zs-437",
+      "title": "蜂 (Live)",
+      "album": "2024",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第七期"
+    },
+    {
+      "id": "zs-438",
+      "title": "荒芜之地 (Live)",
+      "album": "2024.10.06",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第一季第八期"
+    },
+    {
+      "id": "zs-439",
+      "title": "孤独音乐家 (Live)",
+      "album": "2024.10.27",
+      "year": 2024,
+      "division": "音综",
+      "seed": 50,
+      "note": "音乐缘计划》第一季"
+    },
+    {
+      "id": "zs-440",
+      "title": "幽灵公主 (Live)",
+      "album": "2020.06",
+      "year": 2020,
+      "division": "音综",
+      "seed": 50,
+      "note": "《青春环游记》第二季"
+    },
+    {
+      "id": "zs-441",
+      "title": "麦田里的摇滚",
+      "album": "2025.01.26",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": ""
+    },
+    {
+      "id": "zs-442",
+      "title": "自诩周全 (Live)",
+      "album": "2025.10.24",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第一期"
+    },
+    {
+      "id": "zs-443",
+      "title": "时差 (Live)",
+      "album": "2025.10.24",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第一期"
+    },
+    {
+      "id": "zs-444",
+      "title": "造物 (Live)",
+      "album": "2025.11.7",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第二期"
+    },
+    {
+      "id": "zs-445",
+      "title": "晚风请你告诉她 (Live)",
+      "album": "2025.11.7",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第三期"
+    },
+    {
+      "id": "zs-446",
+      "title": "象人 (Live)",
+      "album": "2025.11.14",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第三期"
+    },
+    {
+      "id": "zs-447",
+      "title": "雨季又来临 (Live)",
+      "album": "2025.11.14",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第四期"
+    },
+    {
+      "id": "zs-448",
+      "title": "爱丽丝卿 (Live)",
+      "album": "2025.11.21",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第四期"
+    },
+    {
+      "id": "zs-449",
+      "title": "告别旅行 (Live)",
+      "album": "2025.11.21",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第五期"
+    },
+    {
+      "id": "zs-450",
+      "title": "扑通扑通 (Live)",
+      "album": "2025.11.28",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季第五期"
+    },
+    {
+      "id": "zs-451",
+      "title": "怜悯 (Live)",
+      "album": "2025.12.05",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季"
+    },
+    {
+      "id": "zs-452",
+      "title": "Make up forever (Live)",
+      "album": "2025.12.05",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季"
+    },
+    {
+      "id": "zs-453",
+      "title": "地球没有你 (Live)",
+      "album": "2025.12.14",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季"
+    },
+    {
+      "id": "zs-454",
+      "title": "全世界下雨 (Live)",
+      "album": "2025.12.19",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季"
+    },
+    {
+      "id": "zs-455",
+      "title": "山灵 (Live)",
+      "album": "2025.12.26",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季"
+    },
+    {
+      "id": "zs-456",
+      "title": "逃开夜幕 (Live)",
+      "album": "2025.11.28",
+      "year": 2025,
+      "division": "音综",
+      "seed": 50,
+      "note": "《音乐缘计划》第二季"
+    },
+    {
+      "id": "zs-457",
+      "title": "好花红 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "舞台",
+      "note": "贵州春节联欢晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-458",
+      "title": "永远同在 (Live)",
+      "album": "2019",
+      "year": 2019,
+      "division": "舞台",
+      "note": "2019最美的夜bilibili 晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-459",
+      "title": "飞鸟和鱼 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "2020主持人新春歌会《我和春天有个约会》",
+      "seed": 50
+    },
+    {
+      "id": "zs-460",
+      "title": "Zoobi Doobi (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "江苏卫视聚划算55 青春选择之夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-461",
+      "title": "Eyes One Me (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "江苏卫视618 超级晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-462",
+      "title": "笑之歌 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "江苏卫视2020江苏卫视618 超级晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-463",
+      "title": "Say So (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "东方卫视618 超级秀",
+      "seed": 50
+    },
+    {
+      "id": "zs-464",
+      "title": "起风了 (Live)",
+      "album": "2020.06.25",
+      "year": 2020,
+      "division": "舞台",
+      "note": "哔哩哔哩11周年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-465",
+      "title": "谢谢你听过我唱的这些歌 (Live)",
+      "album": "2020.07.25",
+      "year": 2020,
+      "division": "舞台",
+      "note": "晚安明天见线上音乐会",
+      "seed": 50
+    },
+    {
+      "id": "zs-466",
+      "title": "红玫瑰 (Live)",
+      "album": "2020.10",
+      "year": 2020,
+      "division": "舞台",
+      "note": "上海国潮音乐嘉年华",
+      "seed": 50
+    },
+    {
+      "id": "zs-467",
+      "title": "左手指月 (Live)",
+      "album": "2020.10.1",
+      "year": 2020,
+      "division": "舞台",
+      "note": "2020央视中秋晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-468",
+      "title": "大鱼的天堂 (Live)",
+      "album": "2020.10",
+      "year": 2020,
+      "division": "舞台",
+      "note": "浙江卫视抖音美好奇妙夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-469",
+      "title": "斯卡布罗集市 (Live)",
+      "album": "2020.10",
+      "year": 2020,
+      "division": "舞台",
+      "note": "江苏卫视快手一千零一夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-470",
+      "title": "相思·越剧版 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "王者共创荣耀盛典",
+      "seed": 50
+    },
+    {
+      "id": "zs-471",
+      "title": "极乐净土 (Live)",
+      "album": "2020",
+      "year": 2020,
+      "division": "舞台",
+      "note": "天猫双十一狂欢夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-472",
+      "title": "My heart will go on (Live)",
+      "album": "2020.12.31",
+      "year": 2020,
+      "division": "舞台",
+      "note": "2020江苏卫视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-473",
+      "title": "不老的爸爸 (Live)",
+      "album": "2020.12.31",
+      "year": 2020,
+      "division": "舞台",
+      "note": "2020江苏卫视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-474",
+      "title": "this is me (Live)",
+      "album": "2020.12.31",
+      "year": 2020,
+      "division": "舞台",
+      "note": "哔哩哔哩 2020 最美的夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-475",
+      "title": "别问我什么是迪斯科 (Live)",
+      "album": "2020.12.31",
+      "year": 2020,
+      "division": "舞台",
+      "note": "2020北京卫视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-476",
+      "title": "Got It (Live)",
+      "album": "2021.02.05",
+      "year": 2021,
+      "division": "舞台",
+      "note": "腾讯家族年年年夜 FAN",
+      "seed": 50
+    },
+    {
+      "id": "zs-477",
+      "title": "牛仔很忙 (Live)",
+      "album": "2021.02.12",
+      "year": 2021,
+      "division": "舞台",
+      "note": "江苏卫视春节联欢晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-478",
+      "title": "春天到万家 (Live)",
+      "album": "2021.02.27",
+      "year": 2021,
+      "division": "舞台",
+      "note": "央视元宵晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-479",
+      "title": "枉凝眉 (Live)",
+      "album": "2021.03.13",
+      "year": 2021,
+      "division": "舞台",
+      "note": "电视剧品质盛典",
+      "seed": 50
+    },
+    {
+      "id": "zs-480",
+      "title": "You Raise Me Up (Live)",
+      "album": "2021.04.09",
+      "year": 2021,
+      "division": "舞台",
+      "note": "全球外交官中国文化之夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-481",
+      "title": "月光爱人 (Live)",
+      "album": "2021.05.25",
+      "year": 2021,
+      "division": "舞台",
+      "note": "南山流行音乐节",
+      "seed": 50
+    },
+    {
+      "id": "zs-482",
+      "title": "我用所有报答爱 (Live)",
+      "album": "2021.05.25",
+      "year": 2021,
+      "division": "舞台",
+      "note": "南山流行音乐节",
+      "seed": 50
+    },
+    {
+      "id": "zs-483",
+      "title": "大艺术家 (Live)",
+      "album": "2021.06.15",
+      "year": 2021,
+      "division": "舞台",
+      "note": "江苏卫视快手616真心夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-484",
+      "title": "Vincent (Live)",
+      "album": "2021.06.15",
+      "year": 2021,
+      "division": "舞台",
+      "note": "湖南卫视天猫 616 开心夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-485",
+      "title": "No Fear In My Heart (Live)",
+      "album": "2021.06.15",
+      "year": 2021,
+      "division": "舞台",
+      "note": "湖南卫视天猫 616 开心夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-486",
+      "title": "Try Everything (Live)",
+      "album": "2021.06.20",
+      "year": 2021,
+      "division": "舞台",
+      "note": "哔哩哔哩夏日毕业歌会",
+      "seed": 50
+    },
+    {
+      "id": "zs-487",
+      "title": "光之翼 (Live)",
+      "album": "2021.08.17",
+      "year": 2021,
+      "division": "舞台",
+      "note": "湖南卫视新潮好物夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-488",
+      "title": "平凡之路 (Live)",
+      "album": "2021.08.18",
+      "year": 2021,
+      "division": "舞台",
+      "note": "湖南卫视818汽车之夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-489",
+      "title": "我和我的祖国 (Live)",
+      "album": "2021.10.01",
+      "year": 2021,
+      "division": "舞台",
+      "note": "请你来听我的演唱会",
+      "seed": 50
+    },
+    {
+      "id": "zs-490",
+      "title": "月牙湾 (Live)",
+      "album": "2021.10.04",
+      "year": 2021,
+      "division": "舞台",
+      "note": "潮拜72小时音乐节",
+      "seed": 50
+    },
+    {
+      "id": "zs-491",
+      "title": "梦奇梦奇 (Live)",
+      "album": "2021.10.30",
+      "year": 2021,
+      "division": "舞台",
+      "note": "王者荣耀2021六周年共创之夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-492",
+      "title": "送你一朵小红花+不舍+如果声音不记得+和光同尘+这世界那么多人 (Live)",
+      "album": "2021.12.11",
+      "year": 2021,
+      "division": "舞台",
+      "note": "第3届腾讯音乐娱乐盛典",
+      "seed": 50
+    },
+    {
+      "id": "zs-493",
+      "title": "你要跳舞吗 (Live)",
+      "album": "2021.12.31",
+      "year": 2021,
+      "division": "舞台",
+      "note": "启航2022央视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-494",
+      "title": "小城故事+漫步人生路+大鱼 (Live)",
+      "album": "2021.12.31",
+      "year": 2021,
+      "division": "舞台",
+      "note": "2021江苏卫视跨年演唱会",
+      "seed": 50
+    },
+    {
+      "id": "zs-495",
+      "title": "错位时空 (Live)",
+      "album": "2022.02.01",
+      "year": 2022,
+      "division": "舞台",
+      "note": "江苏卫视春节联欢晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-496",
+      "title": "RingRingRing+把门开开+茉莉花 (Live)",
+      "album": "2022.02.01",
+      "year": 2022,
+      "division": "舞台",
+      "note": "东方卫视春节联欢晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-497",
+      "title": "你看起来很好吃 (Live)",
+      "album": "2022.02.01",
+      "year": 2022,
+      "division": "舞台",
+      "note": "北京卫视春节联欢晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-498",
+      "title": "洪湖水浪打浪 (Live)",
+      "album": "2022.07.30",
+      "year": 2022,
+      "division": "舞台",
+      "note": "第36届大众电影百花奖颁奖晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-499",
+      "title": "女爵 (Live)",
+      "album": "2022.08.06",
+      "year": 2022,
+      "division": "舞台",
+      "note": "抖音夏日歌会",
+      "seed": 50
+    },
+    {
+      "id": "zs-500",
+      "title": "终身美丽 (Live)",
+      "album": "2022.08.06",
+      "year": 2022,
+      "division": "舞台",
+      "note": "抖音夏日歌会",
+      "seed": 50
+    },
+    {
+      "id": "zs-501",
+      "title": "带我去找夜生活 (Live)",
+      "album": "2022.08.06",
+      "year": 2022,
+      "division": "舞台",
+      "note": "抖音夏日歌会",
+      "seed": 50
+    },
+    {
+      "id": "zs-502",
+      "title": "兰亭序 (Live)",
+      "album": "2022.08.13",
+      "year": 2022,
+      "division": "舞台",
+      "note": "央视夏日歌会",
+      "seed": 50
+    },
+    {
+      "id": "zs-503",
+      "title": "很高兴遇见你 (Live)",
+      "album": "2022.11.12",
+      "year": 2022,
+      "division": "舞台",
+      "note": "2022共创之夜王者荣耀七周年遇见主题曲",
+      "seed": 50
+    },
+    {
+      "id": "zs-504",
+      "title": "love of my life (Live)",
+      "album": "2022.12.31",
+      "year": 2022,
+      "division": "舞台",
+      "note": "2023北京卫视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-505",
+      "title": "TRY (Live)",
+      "album": "2022.12.31",
+      "year": 2022,
+      "division": "舞台",
+      "note": "2023江苏卫视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-506",
+      "title": "Concerto Pour Une Voix 天使之声协奏曲 (Live)",
+      "album": "2022.12.31",
+      "year": 2022,
+      "division": "舞台",
+      "note": "2023江苏卫视跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-507",
+      "title": "枉凝眉+滚滚长江东逝水+白龙马+好汉歌 (Live)",
+      "album": "2022.12.31",
+      "year": 2022,
+      "division": "舞台",
+      "note": "bilibili2023跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-508",
+      "title": "我的祖国 (Live)",
+      "album": "2023.01.22",
+      "year": 2023,
+      "division": "舞台",
+      "note": "2023百花迎春中国文学艺术界春节大联欢",
+      "seed": 50
+    },
+    {
+      "id": "zs-509",
+      "title": "卧龙吟 (Live)",
+      "album": "2023.03.08",
+      "year": 2023,
+      "division": "舞台",
+      "note": "京东晚八点谷建芬音乐会",
+      "seed": 50
+    },
+    {
+      "id": "zs-510",
+      "title": "歌声与微笑 (Live)",
+      "album": "2023.03.08",
+      "year": 2023,
+      "division": "舞台",
+      "note": "京东晚八点谷建芬音乐会",
+      "seed": 50
+    },
+    {
+      "id": "zs-511",
+      "title": "绽放的笑容 (Live)",
+      "album": "2023.03.16",
+      "year": 2023,
+      "division": "舞台",
+      "note": "大地回声中国文联文艺助力乡村振兴原创歌曲专场演出",
+      "seed": 50
+    },
+    {
+      "id": "zs-512",
+      "title": "明天的世界更美好 (Live)",
+      "album": "2023.05.23",
+      "year": 2023,
+      "division": "舞台",
+      "note": "第十八届和十九届华表奖颁奖典礼",
+      "seed": 50
+    },
+    {
+      "id": "zs-513",
+      "title": "未闻花名 (Live)",
+      "album": "2023.06.26",
+      "year": 2023,
+      "division": "舞台",
+      "note": "B站成立14周年庆典",
+      "seed": 50
+    },
+    {
+      "id": "zs-514",
+      "title": "湾 (Live)",
+      "album": "2023.06.29",
+      "year": 2023,
+      "division": "舞台",
+      "note": "2023湾区升明月电影音乐晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-515",
+      "title": "太湖美 (Live)",
+      "album": "2023.09.17",
+      "year": 2023,
+      "division": "舞台",
+      "note": "太湖美音乐会",
+      "seed": 50
+    },
+    {
+      "id": "zs-516",
+      "title": "谷雨天 (Live)",
+      "album": "2023.10.09",
+      "year": 2023,
+      "division": "舞台",
+      "note": "原声天籁中国民歌盛典",
+      "seed": 50
+    },
+    {
+      "id": "zs-517",
+      "title": "Golden Hour (Live)",
+      "album": "2023.10.15",
+      "year": 2023,
+      "division": "舞台",
+      "note": "2023抖音美好奇妙夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-518",
+      "title": "千灯之约 (Live)",
+      "album": "2023.10.28",
+      "year": 2023,
+      "division": "舞台",
+      "note": "2023王者荣耀共创之夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-519",
+      "title": "霓虹甜心 (Live)",
+      "album": "2023.11.19",
+      "year": 2023,
+      "division": "舞台",
+      "note": "广州草莓音乐节",
+      "seed": 50
+    },
+    {
+      "id": "zs-520",
+      "title": "敢爱敢做 (Live)",
+      "album": "2023.11.19",
+      "year": 2023,
+      "division": "舞台",
+      "note": "广州草莓音乐节",
+      "seed": 50
+    },
+    {
+      "id": "zs-521",
+      "title": "冬天的秘密+风的季节 (Live)",
+      "album": "2023.12.28",
+      "year": 2023,
+      "division": "舞台",
+      "note": "抖音特仑苏美好惊喜夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-522",
+      "title": "乌兰巴托的夜 (Live)",
+      "album": "2023.12.31",
+      "year": 2023,
+      "division": "舞台",
+      "note": "北京卫视跨年舞台",
+      "seed": 50
+    },
+    {
+      "id": "zs-523",
+      "title": "虽然我看不见，但我听得到 (Live)",
+      "album": "2024.10.19",
+      "year": 2024,
+      "division": "舞台",
+      "note": "声音河流",
+      "seed": 50
+    },
+    {
+      "id": "zs-524",
+      "title": "Fire (Live)",
+      "album": "2024.12.31",
+      "year": 2024,
+      "division": "舞台",
+      "note": "bilibili2024最美的夜跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-525",
+      "title": "雨蝶 (Live)",
+      "album": "2024.12.31",
+      "year": 2024,
+      "division": "舞台",
+      "note": "2025跨年演唱会",
+      "seed": 50
+    },
+    {
+      "id": "zs-526",
+      "title": "山鹰和兰花花 (Live)",
+      "album": "2025.1.29",
+      "year": 2025,
+      "division": "舞台",
+      "note": "2025央视总台春节联欢晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-527",
+      "title": "I See You (Live)",
+      "album": "2025.10.29",
+      "year": 2025,
+      "division": "舞台",
+      "note": "2025抖音美好奇妙夜",
+      "seed": 50
+    },
+    {
+      "id": "zs-528",
+      "title": "Young and Beautiful (Live)",
+      "album": "2025.12.31",
+      "year": 2025,
+      "division": "舞台",
+      "note": "江苏卫视2026跨年演唱会",
+      "seed": 50
+    },
+    {
+      "id": "zs-529",
+      "title": "Never Enough (Live)",
+      "album": "2025.12.31",
+      "year": 2025,
+      "division": "舞台",
+      "note": "bilibili2025最美的夜跨年晚会",
+      "seed": 50
+    },
+    {
+      "id": "zs-530",
+      "title": "故乡的云 (Live)",
+      "album": "2025.09.28",
+      "year": 2025,
+      "division": "舞台",
+      "note": "2025大湾区新年音乐会",
       "seed": 50
     }
   ]

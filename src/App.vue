@@ -43,7 +43,7 @@ const showBar = computed(() => route.name !== 'home')
 
     <footer class="foot">
       <span class="brand-mark">Shen<span class="gold-text">cup</span></span>
-      <span class="dim">· {{ t.artist }}全曲库对决 · 非官方粉丝作品</span>
+      <span class="dim">· 为爱发电 仅供粉丝内部娱乐</span>
     </footer>
   </div>
 </template>

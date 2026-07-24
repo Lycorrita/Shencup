@@ -1,212 +1,142 @@
-// 赛制自检 v5：R1 主动晋级 → 每轮赛后按赛程发卡救回(必须凑偶) → 八强补位 → 排位决赛(1~8)
-// 运行: node scripts/selftest.ts
+// 赛制自检 v7：换位 + 十强收口 + 十强决赛(精确 1~10) + 发卡表 + 全流程收敛
+// 运行: node scripts/selftest.ts   (Node 22+ 内置类型擦除，无需编译)
+//
+// 三组检查：
+//   1) rescueCards / swapCards 发卡表与文档一致
+//   2) 十强决赛：任意 10 首必能排出唯一且完整的 1~10 名
+//   3) 全流程：从缩圈后到十强收口必收敛、无死锁、收口时赢家 n<=10
 
-import { shuffle, chunk, randomPairs, elimRange, rescueCards } from '../src/engine/tournament.ts'
+import { shuffle, randomPairs, rescueCards, swapCards } from '../src/engine/tournament.ts'
 
-type FStage = 'qf' | 'place57sf' | 'sf' | 'place7' | 'place5' | 'place3' | 'final'
-const rnd = <T>(a: T[]): T => a[Math.floor(Math.random() * a.length)]
-
-interface Result {
-  done: boolean
-  ranks: (string | null)[]
-  champion: string | null
-  runnerUp: string | null
-  semifinalIds: string[]
-  steps: number
+let pass = 0
+let fail = 0
+function check(name: string, cond: boolean, extra = '') {
+  if (cond) {
+    pass++
+  } else {
+    fail++
+    console.log(`  ✗ ${name} ${extra}`)
+  }
 }
 
-/** 复刻 store：R1 救回 + 各轮(赛后救回凑偶) + 八强排位决赛 */
-function run(picks: string[], cuts: string[]): Result {
-  let survivors = [...picks]
-  let roundLosers = [...cuts]
-  let roundPool = new Set(cuts)
-  let roundNumber = 0
-  let cards = 0
-  const rescues: Record<string, number> = {}
-  let steps = 0
-  const GUARD = 500000
+/* ---------- 1) 发卡表 ---------- */
+// rescueCards(round, count)：e=偶 / o=奇
+const RESCUE = [
+  [0, 228, 20], [0, 227, 19],
+  [1, 114, 16], [1, 113, 17],
+  [2, 60, 12], [2, 59, 11],
+  [3, 30, 10], [3, 29, 11],
+  [4, 24, 6], [4, 23, 7],
+  [5, 20, 6], [5, 19, 5],
+  [6, 16, 4], [6, 15, 5],
+  [7, 12, 2], [7, 11, 3],
+  [8, 10, 2], [8, 9, 1],
+] as const
+for (const [r, c, expect] of RESCUE) {
+  check(`rescueCards(${r},${c})=${expect}`, rescueCards(r as number, c as number) === expect, `got ${rescueCards(r as number, c as number)}`)
+}
+check('swapCards(0)=0 (缩圈无换位)', swapCards(0) === 0)
+check('swapCards(1..3)=5', [1, 2, 3].every((r) => swapCards(r) === 5))
+check('swapCards(4..5)=3', [4, 5].every((r) => swapCards(r) === 3))
+check('swapCards(6+)=1', [6, 7, 9, 20].every((r) => swapCards(r) === 1))
 
-  // finale state
-  let finaleActive = false
-  let finaleSurvivors: string[] = []
-  let fStage: FStage | null = null
-  let fPairs: [string, string][] = []
-  let fIdx = 0
-  let fWinners: string[] = []
-  let fLosers: string[] = []
-  let fp: Record<string, string[]> = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] }
-  let ranks: (string | null)[] = new Array(9).fill(null)
-  let champion: string | null = null
-  let runnerUp: string | null = null
-  const semifinalIds: string[] = []
-  let done = false
+/* ---------- 2) 十强决赛：1~10 唯一完整 ---------- */
+// 复刻 store 的 fStage 流转
+function runFinale(input: string[]): (string | null)[] {
+  const ranks: (string | null)[] = new Array(11).fill(null)
+  const fp: Record<string, string[]> = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [], byes: [], q8: [] }
+  let stage = 'playin'
+  let fPairs: string[][] = []
+  let fW: string[] = []
+  let fL: string[] = []
 
-  const bump = (id: string, d: number) => {
-    rescues[id] = Math.max(0, (rescues[id] || 0) + d)
-  }
-
-  function beginRescueStage() {
-    cards = rescueCards(roundNumber, survivors.length)
-  }
-  /** 选一个合法救回数 R：使 survivors+R 为偶数 */
-  function doRescue() {
-    const sp = survivors.length % 2
-    const opts: number[] = []
-    for (let R = 0; R <= cards; R++) if (R % 2 === sp) opts.push(R)
-    if (!opts.length) return
-    const R = rnd(opts)
-    const take = shuffle([...roundPool]).slice(0, R)
-    for (const id of take) {
-      survivors.push(id)
-      roundPool.delete(id)
-      bump(id, 1)
+  const start = (st: string) => {
+    let inp: string[] = []
+    if (st === 'playin') inp = input
+    else if (st === 'place9') inp = fp.lf
+    else if (st === 'qf') inp = fp.q8
+    else if (st === 'place57sf') inp = fp.lf
+    else if (st === 'sf') inp = fp.wf
+    else if (st === 'place7') inp = fp.pl
+    else if (st === 'place5') inp = fp.pw
+    else if (st === 'place3') inp = fp.sl
+    else if (st === 'final') inp = fp.ff
+    if (st === 'playin') {
+      const a = shuffle(inp)
+      fp.byes = a.slice(4)
+      fPairs = [[a[0], a[1]], [a[2], a[3]]]
+    } else {
+      fPairs = randomPairs(inp)
     }
-    cards -= R
+    fW = []
+    fL = []
   }
-  function fillToEight() {
-    while (survivors.length < 8 && roundPool.size > 0) {
-      const cand = [...roundPool].pop()!
-      survivors.push(cand)
-      roundPool.delete(cand)
-      bump(cand, 1)
-    }
-  }
-  function endRescue() {
-    if (survivors.length <= 8) fillToEight()
-    roundLosers = []
-    roundPool = new Set()
-    cards = 0
-    if (survivors.length <= 8) {
-      enterFinale()
-    }
-  }
-
-  function startFStage(stage: FStage) {
-    fStage = stage
-    let input: string[] = []
-    if (stage === 'qf') input = survivors
-    else input = fp[{ place57sf: 'lf', sf: 'wf', place7: 'pl', place5: 'pw', place3: 'sl', final: 'ff' }[stage]!]
-    fPairs = randomPairs(input)
-    fIdx = 0
-    fWinners = []
-    fLosers = []
-    if (fPairs.length === 0) fStageDone()
-  }
-  function fStageDone() {
-    const w = [...fWinners]
-    const l = [...fLosers]
-    const st = fStage
-    if (st === 'qf') { fp = { ...fp, wf: w, lf: l }; startFStage('place57sf') }
-    else if (st === 'place57sf') { fp = { ...fp, pw: w, pl: l }; startFStage('sf') }
-    else if (st === 'sf') { fp = { ...fp, ff: w, sl: l }; startFStage('place7') }
-    else if (st === 'place7') { ranks[7] = w[0]; ranks[8] = l[0]; startFStage('place5') }
-    else if (st === 'place5') { ranks[5] = w[0]; ranks[6] = l[0]; startFStage('place3') }
-    else if (st === 'place3') { ranks[3] = w[0]; ranks[4] = l[0]; semifinalIds.push(w[0], l[0]); startFStage('final') }
-    else if (st === 'final') { ranks[1] = w[0]; ranks[2] = l[0]; champion = w[0]; runnerUp = l[0]; finaleActive = false; done = true }
-  }
-  function playFinale() {
-    finaleActive = true
-    fp = { wf: [], lf: [], pw: [], pl: [], ff: [], sl: [] }
-    ranks = new Array(9).fill(null)
-    startFStage('qf')
-    while (!done && fPairs.length) {
-      if (steps++ > GUARD) throw new Error('guard finale')
-      const p = fPairs[fIdx]
-      const winner = rnd(p)
-      const loser = winner === p[0] ? p[1] : p[0]
-      fWinners.push(winner)
-      fLosers.push(loser)
-      fIdx++
-      if (fIdx >= fPairs.length) fStageDone()
-    }
-  }
-  function enterFinale() {
-    finaleSurvivors = [...survivors]
-    if (new Set(finaleSurvivors).size !== finaleSurvivors.length) {
-      console.log('  DEBUG finale survivors has dup:', JSON.stringify(finaleSurvivors))
-    }
-    playFinale()
+  const done = () => {
+    const w = [...fW]
+    const l = [...fL]
+    const s = stage
+    if (s === 'playin') { fp.q8 = [...w, ...fp.byes]; fp.lf = l; stage = 'place9'; start('place9'); return }
+    if (s === 'place9') { ranks[9] = w[0]; ranks[10] = l[0]; stage = 'qf'; start('qf'); return }
+    if (s === 'qf') { fp.wf = w; fp.lf = l; stage = 'place57sf'; start('place57sf'); return }
+    if (s === 'place57sf') { fp.pw = w; fp.pl = l; stage = 'sf'; start('sf'); return }
+    if (s === 'sf') { fp.ff = w; fp.sl = l; stage = 'place7'; start('place7'); return }
+    if (s === 'place7') { ranks[7] = w[0]; ranks[8] = l[0]; stage = 'place5'; start('place5'); return }
+    if (s === 'place5') { ranks[5] = w[0]; ranks[6] = l[0]; stage = 'place3'; start('place3'); return }
+    if (s === 'place3') { ranks[3] = w[0]; ranks[4] = l[0]; stage = 'final'; start('final'); return }
+    if (s === 'final') { ranks[1] = w[0]; ranks[2] = l[0]; stage = ''; return }
   }
 
-  function playRound(k: number) {
-    if (steps++ > GUARD) throw new Error('guard round')
-    roundNumber = k
+  start('playin')
+  let guard = 0
+  while (stage && guard++ < 100) {
+    for (const p of fPairs) { fW.push(p[0]); fL.push(p[1]) }
+    done()
+  }
+  return ranks
+}
+
+for (let i = 0; i < 500; i++) {
+  const input = Array.from({ length: 10 }, (_, k) => 's' + k)
+  const r = runFinale(input)
+  const placed = r.slice(1, 11) as string[]
+  check(`finale #${i} 完整`, placed.every(Boolean))
+  check(`finale #${i} 唯一`, new Set(placed).size === 10)
+  check(`finale #${i} 属于输入`, placed.every((x) => input.includes(x)))
+}
+
+/* ---------- 3) 全流程收敛 ---------- */
+function play(startN: number) {
+  let survivors = Array.from({ length: startN }, (_, k) => 's' + k)
+  let round = 0
+  let guard = 0
+  let finalN: number | null = null
+  while (guard++ < 200) {
+    round++
     const pairs = randomPairs(survivors)
-    const winners: string[] = []
-    const losers: string[] = []
-    for (const p of pairs) {
-      const w = rnd(p)
-      winners.push(w)
-      losers.push(w === p[0] ? p[1] : p[0])
+    const winners = pairs.map((p) => p[Math.random() < 0.5 ? 0 : 1])
+    const n = winners.length
+    if (n <= 10) { finalN = n; break }
+    // 换位不改人数；复活用最少卡凑偶
+    const cards = rescueCards(round, n)
+    if (n % 2 === 1) {
+      if (cards < 1) return { deadlock: true }
+      winners.push('POOL')
     }
     survivors = winners
-    roundLosers = losers
-    roundPool = new Set(losers)
-    beginRescueStage()
-    doRescue()
-    endRescue()
-    if (!done && survivors.length > 8) playRound(k + 1)
   }
-
-  // R1 救回阶段（round 0）
-  beginRescueStage()
-  doRescue()
-  endRescue()
-  if (!done && survivors.length > 8) playRound(1)
-
-  return { done, ranks, champion, runnerUp, semifinalIds, steps }
+  return { finalN, rounds: round }
 }
 
-/** R1：n 首随机分 8 人组，每组主动晋级 [min,max] 首 */
-function simulateR1(n: number): { picks: string[]; cuts: string[] } {
-  const ids = Array.from({ length: n }, (_, i) => 's' + i)
-  const groups = chunk(shuffle(ids), 8)
-  const picks: string[] = []
-  const cuts: string[] = []
-  for (const g of groups) {
-    const [mn, mx] = elimRange(g.length)
-    const pickCount = mn + Math.floor(Math.random() * (mx - mn + 1))
-    const pks = new Set(shuffle(g).slice(0, pickCount))
-    for (const id of g) (pks.has(id) ? picks : cuts).push(id)
-  }
-  return { picks, cuts }
+let deadlock = 0
+let badEntry = 0
+for (let i = 0; i < 300; i++) {
+  const r = play(228)
+  if ((r as any).deadlock) deadlock++
+  else if (!(r as any).finalN >= 2 || !((r as any).finalN <= 10)) badEntry++
 }
+check('全流程无死锁', deadlock === 0, `${deadlock}/300`)
+check('十强收口 n∈[2,10]', badEntry === 0, `${badEntry}/300`)
 
-let fail = 0
-let pass = 0
-function assert(c: boolean, m: string) {
-  if (c) pass++
-  else { fail++; console.log('  ✗ ' + m) }
-}
-
-for (const n of [8, 16, 25, 50, 99, 150, 250, 400]) {
-  for (let trial = 0; trial < 30; trial++) {
-    const { picks, cuts } = simulateR1(n)
-    const r = run(picks, cuts)
-    assert(r.done, `[N=${n} #${trial}] 未终止`)
-    assert(r.champion !== null, `[N=${n} #${trial}] 无冠军`)
-    const top8 = r.ranks.slice(1, 9)
-    assert(top8.every((x) => x !== null), `[N=${n} #${trial}] 1~8 名未排满`)
-    assert(r.champion === r.ranks[1], `[N=${n} #${trial}] 冠军≠第1名`)
-    assert(r.runnerUp === r.ranks[2], `[N=${n} #${trial}] 亚军≠第2名`)
-    assert(
-      r.semifinalIds.length === 2 &&
-        r.semifinalIds.includes(r.ranks[3]!) &&
-        r.semifinalIds.includes(r.ranks[4]!),
-      `[N=${n} #${trial}] 四强≠3/4名`,
-    )
-    assert(new Set(top8 as string[]).size === 8, `[N=${n} #${trial}] 8名有重复`)
-    assert(r.steps < 400000, `[N=${n} #${trial}] 步数异常`)
-  }
-}
-
-assert(rescueCards(0, 10) === 10, 'rescueCards r1 even=10')
-assert(rescueCards(0, 9) === 9, 'rescueCards r1 odd=9')
-assert(rescueCards(1, 10) === 12, 'rescueCards r1pk even=12')
-assert(rescueCards(1, 9) === 13, 'rescueCards r1pk odd=13')
-assert(rescueCards(7, 9) === 1, 'rescueCards r7 odd=1')
-assert(rescueCards(7, 10) === 0, 'rescueCards r7 even=0')
-
-console.log(`\n共 ${pass + fail} 项断言：✓ ${pass}  ✗ ${fail}`)
-console.log(fail === 0 ? 'ALL PASS' : `${fail} FAILED`)
-process.exit(fail === 0 ? 0 : 1)
+/* ---------- 汇总 ---------- */
+console.log(`\nselftest v7: ${pass} passed, ${fail} failed`)
+if (fail > 0) process.exit(1)
