@@ -10,7 +10,7 @@ const tabs: { key: TabKey; label: string }[] = [
   { key: 'runnerUps', label: '亚军榜' },
   { key: 'topTens', label: '十强榜' },
   { key: 'rescues', label: '遗珠榜' },
-  { key: 'royal', label: '皇族榜' },
+  { key: 'royal', label: '小众榜' },
 ]
 const tab = ref<TabKey>('champions')
 const entries = ref<RankEntry[]>([])
@@ -31,7 +31,7 @@ const metric = (e: RankEntry): number =>
   tab.value === 'royal' ? e.rescues : e[tab.value as MetricKey] || 0
 
 const sorted = computed(() => {
-  // 皇族榜：十强（topTens>0）按捞回次数升序；其余按对应指标降序
+  // 小众榜：十强（topTens>0）按捞回次数升序；其余按对应指标降序
   if (tab.value === 'royal') {
     return entries.value
       .filter((e) => e.topTens > 0)

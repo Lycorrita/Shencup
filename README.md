@@ -2,7 +2,7 @@
 
 > 周深全曲库「世界杯式」1v1 对决 Web 应用。无需注册、点开即玩；墨金视觉、面向国内、非官方粉丝作品。
 
-把一整座曲库（530 首：录音室 327 + 音综 129 + 舞台 74）扔进随机签表，缩圈、两两 PK、换位翻盘、遗珠捞回，一路角逐出**十强**与**冠军**，最后导出可分享的结果图、把战绩上报到全局榜单。
+把一整座曲库（531 首：录音室 328 + 音综 129 + 舞台 74）扔进随机签表，缩圈、两两 PK、换位翻盘、遗珠捞回，一路角逐出**十强**与**冠军**，最后导出可分享的结果图、把战绩上报到全局榜单。
 
 ---
 
@@ -161,7 +161,7 @@ flowchart TB
         EX[exportImage 结果图]
         RK[rank 榜单接口]
     end
-    DATA[(catalog.json<br/>456 首)] --> ST
+    DATA[(catalog.json<br/>531 首)] --> ST
     V --> ST --> EG
     V --> L
     RK -. HTTP .-> CB[("CloudBase 云函数 rank<br/>可选")]
@@ -219,7 +219,7 @@ src/
     exportImage.ts       Canvas 结果图 + 二维码
     rank.ts              全局榜单接口 + 上报/已上报标记
   styles/                墨金设计令牌(tokens) + 全局样式(base)
-  data/catalog.json      摄取产物（456 首）
+  data/catalog.json      摄取产物（531 首）
 functions/rank/          CloudBase 云函数（get/submit）
 scripts/
   ingest-txt.mjs         txt → catalog.json
