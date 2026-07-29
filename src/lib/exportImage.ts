@@ -259,11 +259,50 @@ export async function renderResultImage(input: ExportInput): Promise<string> {
   return cv.toDataURL('image/png')
 }
 
-export function downloadDataUrl(dataUrl: string, filename: string) {
+export function downloadDataUrl(url: string, filename: string) {
   const a = document.createElement('a')
-  a.href = dataUrl
+  a.href = url
   a.download = filename
   document.body.appendChild(a)
   a.click()
   a.remove()
+}
+
+/** dataURL → Blob（Web Share / blob 下载用）。fetch 失败时走 base64 解码兜底。 */
+export async function dataUrlToBlob(dataUrl: string): Promise<Blob> {
+  try {
+    const r = await fetch(dataUrl)
+    return await r.blob()
+  } catch {
+    const [head, b64] = dataUrl.split(',')
+    const mime = (head.match(/data:(.*?);/) || [, 'image/png'])[1]
+    const bin = atob(b64 || '')
+    const u8 = new Uint8Array(bin.length)
+    for (let i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i)
+    return new Blob([u8], { type: mime })
+  }
+}
+
+/**
+ * 保存图片：移动端优先 Web Share（原生保存/分享面板），否则 blob 下载，再退 dataURL 下载。
+ * 建议调用方先把 blob 算好传入（避免 await 打断用户手势）。
+ */
+export async function saveImage(dataUrl: string, blob: Blob | null, filename: string): Promise<void> {
+  const nav = navigator as any
+  const file = blob ? new File([blob], filename, { type: 'image/png' }) : null
+  if (file && nav.share && nav.canShare && nav.canShare({ files: [file] })) {
+    try {
+      await nav.share({ files: [file], title: filename, text: 'Shencup 结果图' })
+      return
+    } catch (e) {
+      if (/abort/i.test(String((e && (e as { message?: unknown }).message) || e))) return // 用户取消
+    }
+  }
+  if (blob) {
+    const u = URL.createObjectURL(blob)
+    downloadDataUrl(u, filename)
+    setTimeout(() => URL.revokeObjectURL(u), 5000)
+  } else {
+    downloadDataUrl(dataUrl, filename)
+  }
 }

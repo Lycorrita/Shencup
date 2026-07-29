@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 import { useTournament } from '@/stores/tournament'
 import type { Song } from '@/types'
 import { metaLine, noteLine, hasNote } from '@/lib/format'
-import { renderResultImage, downloadDataUrl } from '@/lib/exportImage'
+import { renderResultImage, dataUrlToBlob, saveImage } from '@/lib/exportImage'
 import { submitResult, BACKEND_READY, MAX_SUBMITS, getSubmitCount, isRunReported } from '@/lib/rank'
 
 const t = useTournament()
@@ -25,6 +25,8 @@ function tierSongs(ids: string[]) {
 
 const exporting = ref(false)
 const imgUrl = ref<string | null>(null)
+const imgBlob = ref<Blob | null>(null)
+const saveHint = ref('')
 const submitting = ref(false)
 // 上报：每浏览器限 MAX_SUBMITS 次；同一局不可重复
 const submitCount = ref(getSubmitCount())
@@ -41,6 +43,9 @@ const reportLabel = computed(() => {
 async function doExport() {
   if (!t.champion) return
   exporting.value = true
+  saveHint.value = ''
+  imgUrl.value = null
+  imgBlob.value = null
   try {
     const d = new Date()
     const date = `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`
@@ -59,12 +64,22 @@ async function doExport() {
       qrUrl: QR_URL,
     })
     imgUrl.value = url
+    imgBlob.value = await dataUrlToBlob(url) // 预先转 blob，保存时走 Web Share / blob 下载
+  } catch (e) {
+    saveHint.value = '生成失败：' + String((e && (e as { message?: unknown }).message) || e) + '；可截图保存当前页面'
   } finally {
     exporting.value = false
   }
 }
-function saveImg() {
-  if (imgUrl.value) downloadDataUrl(imgUrl.value, `Shencup-${t.champion?.title || '冠军'}.png`)
+async function saveImg() {
+  if (!imgUrl.value) return
+  saveHint.value = '保存中…'
+  try {
+    await saveImage(imgUrl.value, imgBlob.value, `Shencup-${t.champion?.title || '冠军'}.png`)
+    saveHint.value = '已触发保存；若无反应，可长按上方图片选择「存储图像」'
+  } catch (e) {
+    saveHint.value = '保存失败，请长按上方图片直接另存'
+  }
 }
 async function report() {
   if (!canReport.value) return
@@ -183,6 +198,7 @@ function restart() {
       <button class="modal-x" @click="imgUrl = null">✕</button>
       <img :src="imgUrl" alt="Shencup 结果图" class="modal-img" />
       <button class="btn btn-gold btn-block save" @click="saveImg">保存图片</button>
+      <p class="save-hint">{{ saveHint || '保存不了？长按上方图片可直接另存到相册' }}</p>
     </div>
   </section>
 </template>
@@ -393,6 +409,14 @@ function restart() {
 }
 .save {
   max-width: 320px;
+}
+.save-hint {
+  text-align: center;
+  font-size: 11px;
+  color: var(--dim-2);
+  margin-top: 10px;
+  max-width: 320px;
+  line-height: 1.6;
 }
 .report-reason {
   text-align: center;
